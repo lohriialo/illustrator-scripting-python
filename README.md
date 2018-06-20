@@ -34,7 +34,7 @@ areaTextRef.Contents = "Hello World!"
 * [Illustrator Scripting Guide](https://d1g4ig3mxc5xed.cloudfront.net/static/installers/ai/scripting/cc_2018/scripting_guide/ScriptingGuide_March2018.pdf)
 * [Illustrator Scripting Developer Forum](https://forums.adobe.com/community/illustrator/illustrator_scripting)
 * [Illustrator Scripting Javascript API Reference](https://d1g4ig3mxc5xed.cloudfront.net/installers/ai/scripting/cc_2018/web/v2/Illustrator+JavaScript+Scripting+Reference_March2018.pdf)
-* [Illustrator Scripting Tutorials](https://github.com/jtnimoy/scripting-for-illustrator-tutorial)
+* [Illustrator Scripting Javascript Tutorials](https://github.com/jtnimoy/scripting-for-illustrator-tutorial)
 
 
 
