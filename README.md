@@ -1,2 +1,2 @@
-# illustrator-scripting-python
-![](https://imgur.com/1qe9LVk "Photoshop Python")
+# Illustrator Scripting in Python
+![](https://i.imgur.com/1qe9LVk.png "Illustrator Python")
