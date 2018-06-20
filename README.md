@@ -14,7 +14,7 @@ Illustrator scripting officially supports JavaScript, AppleScript & VBScript. Ho
 Python is easy to use, powerful, and versatile, making it a great choice for beginners and experts alike. Python’s readability makes it a great first programming language - it allows you to think like a programmer and not waste time understanding the mysterious syntax that other programming languages can require.
 
 # Getting Started
-Python allows you to access COM and it's DOM with the help of a Python extensions like  "pypiwin32" or "comtypes". Install these modules and you're ready to start scripting Photoshop in Python
+Python allows you to access COM and it's DOM with the help of a Python extensions like  "pypiwin32" or "comtypes". Install these modules and you're ready to start scripting Illustrator in Python
 
 * `pip install pypiwin32` or `pip install comtypes`
 
