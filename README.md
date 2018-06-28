@@ -1,3 +1,13 @@
+# WIP (More code snippets coming soon....!)
+
+
+
+
+
+
+
+
+
 # Illustrator Scripting in Python
 ![](https://i.imgur.com/1qe9LVk.png "Illustrator Python")
 
