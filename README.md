@@ -39,6 +39,9 @@ areaTextRef = docRef.TextFrames.AreaText(rectRef)
 areaTextRef.Contents = "Hello World!"
 ```
 
+# Scripting on Mac?
+Yes, scripting on Mac is also possible, see [photoshop_mac_scripting](https://github.com/lohriialo/photoshop-scripting-python/tree/master/mac_scripting) for more details as a reference to getting started
+
 # Illustrator Scripting Resources
 * [Illustrator Scripting Resources](https://console.adobe.io/downloads/ai)
 * [Illustrator Scripting Guide](https://d1g4ig3mxc5xed.cloudfront.net/static/installers/ai/scripting/cc_2018/scripting_guide/ScriptingGuide_March2018.pdf)
