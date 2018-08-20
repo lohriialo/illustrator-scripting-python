@@ -38,6 +38,8 @@ rectRef = docRef.PathItems.Rectangle(700, 50, 100, 100)
 areaTextRef = docRef.TextFrames.AreaText(rectRef)
 areaTextRef.Contents = "Hello World!"
 ```
+# How to inspect a scripting object properties?
+There's not a straight forward way, you need to read the documentation to understand what properties/attributes are available for a scripting object, or possibly a COM browser. For example, I've extracted the Python scripting object reference for Illustrator CC 2018 at [doc_reference](https://github.com/lohriialo/illustrator-scripting-python/tree/master/doc_reference)
 
 # Scripting on Mac?
 Yes, scripting on Mac is also possible, see [photoshop_mac_scripting](https://github.com/lohriialo/photoshop-scripting-python/tree/master/mac_scripting) for more details as a reference to getting started
