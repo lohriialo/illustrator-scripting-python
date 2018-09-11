@@ -2,12 +2,6 @@
 
 
 
-
-
-
-
-
-
 # Illustrator Scripting in Python
 ![](https://i.imgur.com/1qe9LVk.png "Illustrator Python")
 
@@ -30,7 +24,7 @@ Python allows you to access COM and it's DOM with the help of a Python extension
 
 # Hello World!
 ```python
-from win32com.client import Dispatch
+from win32com.client import GetActiveObject
 
 app = GetActiveObject("Illustrator.Application")
 docRef = app.Documents.Add()
