@@ -45,8 +45,31 @@ Yes, scripting on Mac is also possible, see [photoshop_mac_scripting](https://gi
 * [Illustrator Scripting Javascript API Reference](https://d1g4ig3mxc5xed.cloudfront.net/installers/ai/scripting/cc_2018/web/v2/Illustrator+JavaScript+Scripting+Reference_March2018.pdf)
 * [Illustrator Scripting Javascript Tutorials](https://github.com/jtnimoy/scripting-for-illustrator-tutorial)
 
-
-
 # Also see 
 * [InDesign Scripting in Python](https://github.com/lohriialo/indesign-scripting-python)
 * [Photoshop Scripting in Python](https://github.com/lohriialo/photoshop-scripting-python)
+
+# Contribution
+If you've written a useful Illustrator Python script and wants to share with the world, please create a new issue with the file as an attachment to the issue.
+
+When you submit a script, please try to include the following information at the start of your script
+```python
+# script_file_name.py
+
+# Created: 1st January 2019
+__author__ = 'Your Name or Original Author Name'
+__version__ = '1.0'
+
+"""
+A short description of what the script does
+"""
+
+"""
+Instructions on how to use the script, if any
+"""
+
+```
+* Go to  [illustrator-scripting-python/issues/new](https://github.com/lohriialo/illustrator-scripting-python/issues/new)
+* Add title  as `Useful Script`
+* Drag & drop your .py script file into the description area
+* Click `Submit new issue`
