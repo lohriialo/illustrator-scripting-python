@@ -1,11 +1,11 @@
 # -*- coding: mbcs -*-
 # Created by makepy.py version 0.5.01
-# By python version 3.6.1 (v3.6.1:69c0db5, Mar 21 2017, 17:54:52) [MSC v.1900 32 bit (Intel)]
+# By python version 2.7.10 (default, Aug 21 2015, 12:07:58) [MSC v.1500 64 bit (AMD64)]
 # From type library 'ScriptingSupport.aip'
-# On Wed Jun 20 00:19:05 2018
-'Adobe Illustrator 21 Type Library'
+# On Thu Nov 07 12:02:33 2019
+'Adobe Illustrator 24 Type Library'
 makepy_version = '0.5.01'
-python_version = 0x30601f0
+python_version = 0x2070af0
 
 import win32com.client.CLSIDToClass, pythoncom, pywintypes
 import win32com.client.util
@@ -18,7 +18,7 @@ defaultNamedOptArg=pythoncom.Empty
 defaultNamedNotOptArg=pythoncom.Empty
 defaultUnnamedArg=pythoncom.Empty
 
-CLSID = IID('{3271C7D8-D207-4C7C-B2B4-7F3DA9D1A8F9}')
+CLSID = IID('{4342E6A9-F5E0-4580-9F31-5149C20DE298}')
 MajorVersion = 1
 MinorVersion = 0
 LibraryFlags = 8
@@ -152,10 +152,14 @@ class constants:
 	aiIllustrator15               =15         # from enum AiCompatibility
 	aiIllustrator16               =16         # from enum AiCompatibility
 	aiIllustrator17               =17         # from enum AiCompatibility
+	aiIllustrator24               =24         # from enum AiCompatibility
 	aiIllustrator3                =3          # from enum AiCompatibility
 	aiIllustrator8                =8          # from enum AiCompatibility
 	aiIllustrator9                =9          # from enum AiCompatibility
 	aiJapaneseVersion3            =3          # from enum AiCompatibility
+	aiAdornment                   =2          # from enum AiComposerEngineType
+	aiLatinCJKComposer            =0          # from enum AiComposerEngineType
+	aiOptycaComposer              =1          # from enum AiComposerEngineType
 	aiAutomaticJPEG2000High       =18         # from enum AiCompressionQuality
 	aiAutomaticJPEG2000Lossless   =20         # from enum AiCompressionQuality
 	aiAutomaticJPEG2000Low        =16         # from enum AiCompressionQuality
@@ -185,6 +189,18 @@ class constants:
 	aiDocumentCoordinateSystem    =0          # from enum AiCoordinateSystem
 	aiCropJapanese                =2          # from enum AiCropOptions
 	aiCropStandard                =1          # from enum AiCropOptions
+	aiDiacVPosLoose               =1          # from enum AiDiacVPosType
+	aiDiacVPosMedium              =2          # from enum AiDiacVPosType
+	aiDiacVPosOff                 =0          # from enum AiDiacVPosType
+	aiDiacVPosOpenType            =4          # from enum AiDiacVPosType
+	aiDiacVPosTight               =3          # from enum AiDiacVPosType
+	aiArabicDigits                =1          # from enum AiDigitSetType
+	aiDefaultDigits               =0          # from enum AiDigitSetType
+	aiFarsiDigits                 =3          # from enum AiDigitSetType
+	aiHindiDigits                 =2          # from enum AiDigitSetType
+	aiDirOverrideDefault          =0          # from enum AiDirOverrideType
+	aiDirOverrideLTR              =1          # from enum AiDirOverrideType
+	aiKDirOverrideRTL             =2          # from enum AiDirOverrideType
 	aiColumn                      =4          # from enum AiDocumentArtboardLayout
 	aiGridByCol                   =2          # from enum AiDocumentArtboardLayout
 	aiGridByRow                   =1          # from enum AiDocumentArtboardLayout
@@ -241,6 +257,18 @@ class constants:
 	aiPlaceAtEnd                  =2          # from enum AiElementPlacement
 	aiPlaceBefore                 =3          # from enum AiElementPlacement
 	aiPlaceInside                 =0          # from enum AiElementPlacement
+	aiScaleByFactor               =0          # from enum AiExportForScreensScaleType
+	aiScaleByHeight               =2          # from enum AiExportForScreensScaleType
+	aiScaleByResolution           =3          # from enum AiExportForScreensScaleType
+	aiScaleByWidth                =1          # from enum AiExportForScreensScaleType
+	aiSE_JPEG100                  =1          # from enum AiExportForScreensType
+	aiSE_JPEG20                   =4          # from enum AiExportForScreensType
+	aiSE_JPEG50                   =3          # from enum AiExportForScreensType
+	aiSE_JPEG80                   =2          # from enum AiExportForScreensType
+	aiSE_PDF                      =8          # from enum AiExportForScreensType
+	aiSE_PNG24                    =7          # from enum AiExportForScreensType
+	aiSE_PNG8                     =6          # from enum AiExportForScreensType
+	aiSE_SVG                      =5          # from enum AiExportForScreensType
 	aiAutoCAD                     =8          # from enum AiExportType
 	aiFlash                       =7          # from enum AiExportType
 	aiGIF                         =6          # from enum AiExportType
@@ -322,6 +350,9 @@ class constants:
 	aiCyanInk                     =0          # from enum AiInkType
 	aiMagentaInk                  =1          # from enum AiInkType
 	aiYellowInk                   =2          # from enum AiInkType
+	aiBaselineOptimized           =1          # from enum AiJPEGCompressionMethodType
+	aiBaselineStandard            =0          # from enum AiJPEGCompressionMethodType
+	aiProgressive                 =2          # from enum AiJPEGCompressionMethodType
 	aiBeforeRunning               =3          # from enum AiJavaScriptExecutionMode
 	aiDebuggerOnError             =2          # from enum AiJavaScriptExecutionMode
 	aiNeverShowDebugger           =1          # from enum AiJavaScriptExecutionMode
@@ -332,6 +363,14 @@ class constants:
 	aiFullJustifyLastLineRight    =4          # from enum AiJustification
 	aiLeft                        =0          # from enum AiJustification
 	aiRight                       =1          # from enum AiJustification
+	aiKashidaLong                 =3          # from enum AiKashidaWidthType
+	aiKashidaMedium               =2          # from enum AiKashidaWidthType
+	aiKashidaNone                 =0          # from enum AiKashidaWidthType
+	aiKashidaSmall                =1          # from enum AiKashidaWidthType
+	aiKashidaStylistic            =4          # from enum AiKashidaWidthType
+	aiKashidaDefault              =0          # from enum AiKashidasType
+	aiKashidaOff                  =1          # from enum AiKashidasType
+	aiKashidaOn                   =0          # from enum AiKashidasType
 	aiPushIn                      =0          # from enum AiKinsokuOrderEnum
 	aiPushOutFirst                =1          # from enum AiKinsokuOrderEnum
 	aiPushOutOnly                 =2          # from enum AiKinsokuOrderEnum
@@ -451,6 +490,8 @@ class constants:
 	aiTextFrame                   =10         # from enum AiPageItemType
 	aiPageMarksJapanese           =1          # from enum AiPageMarksTypes
 	aiPageMarksRoman              =0          # from enum AiPageMarksTypes
+	aiLeftToRight                 =0          # from enum AiParagraphDirectionType
+	aiRightToLeft                 =1          # from enum AiParagraphDirectionType
 	aiAnchorPoint                 =2          # from enum AiPathPointSelection
 	aiLeftDirection               =3          # from enum AiPathPointSelection
 	aiLeftRightPoint              =5          # from enum AiPathPointSelection
@@ -702,7 +743,7 @@ class Artboards(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1682533681, LCID, 1, (9, 0), ((12, 1),),ArtboardRect
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
+			ret = Dispatch(ret, u'Add', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
 		return ret
 
 	def GetActiveArtboardIndex(self):
@@ -715,7 +756,7 @@ class Artboards(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1732603701, LCID, 1, (9, 0), ((8, 1),),ArtboardName
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetByName', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
+			ret = Dispatch(ret, u'GetByName', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -734,7 +775,7 @@ class Artboards(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
+			ret = Dispatch(ret, u'Item', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
 		return ret
 
 	def Remove(self, Index=defaultNamedNotOptArg):
@@ -767,8 +808,13 @@ class Artboards(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -778,6 +824,140 @@ class Artboards(DispatchBaseClass):
 		except pythoncom.error:
 			raise TypeError("This object does not support enumeration")
 		return win32com.client.util.Iterator(ob, '{30557E1D-A243-499D-84B8-6E170B36A1BD}')
+	#This class has Count() property - allow len(ob) to provide this
+	def __len__(self):
+		return self._ApplyTypes_(*(1668183141, 2, (3, 0), (), "Count", None))
+	#This class has a __len__ - this is needed so 'if object:' always returns TRUE.
+	def __nonzero__(self):
+		return True
+
+class Asset(DispatchBaseClass):
+	'An (exportable) asset'
+	CLSID = IID('{2A144F2D-BD94-4175-B192-1F8143026200}')
+	coclass_clsid = None
+
+	def Delete(self):
+		'delete the object'
+		return self._oleobj_.InvokeTypes(1684368495, LCID, 1, (24, 0), (),)
+
+	def GetNormalizedName(self):
+		'Gets the normalized name without special characters, such that it can be used as a file name'
+		# Result is a Unicode object
+		return self._oleobj_.InvokeTypes(1799704174, LCID, 1, (8, 0), (),)
+
+	_prop_map_get_ = {
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"AssetID": (1883586921, 2, (3, 0), (), "AssetID", None),
+		"AssetName": (1883586926, 2, (8, 0), (), "AssetName", None),
+		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
+	}
+	_prop_map_put_ = {
+		"AssetName": ((1883586926, LCID, 4, 0),()),
+	}
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class Assets(DispatchBaseClass):
+	'A collection of assets'
+	CLSID = IID('{E3A43D4E-69EB-4844-ACB1-35B8686CA0A8}')
+	coclass_clsid = None
+
+	# Result is of type Asset
+	def Add(self, SourceArt=defaultNamedNotOptArg):
+		'Creates an asset from the given art(s)'
+		ret = self._oleobj_.InvokeTypes(1665483073, LCID, 1, (9, 0), ((12, 1),),SourceArt
+			)
+		if ret is not None:
+			ret = Dispatch(ret, u'Add', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	# Result is of type Asset
+	def AddFromSelection(self):
+		'Creates an asset from the selected arts'
+		ret = self._oleobj_.InvokeTypes(1665483078, LCID, 1, (9, 0), (),)
+		if ret is not None:
+			ret = Dispatch(ret, u'AddFromSelection', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	# Result is of type Asset
+	def GetByID(self, AssetID=defaultNamedNotOptArg):
+		'Gets the asset with the specified AssetID'
+		ret = self._oleobj_.InvokeTypes(1799702377, LCID, 1, (9, 0), ((3, 1),),AssetID
+			)
+		if ret is not None:
+			ret = Dispatch(ret, u'GetByID', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	# Result is of type Asset
+	def GetByName(self, AssetName=defaultNamedNotOptArg):
+		'Gets the first asset with specified name'
+		ret = self._oleobj_.InvokeTypes(1799702382, LCID, 1, (9, 0), ((8, 1),),AssetName
+			)
+		if ret is not None:
+			ret = Dispatch(ret, u'GetByName', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	def Index(self, ItemPtr=defaultNamedNotOptArg):
+		return self._oleobj_.InvokeTypes(1885955192, LCID, 1, (3, 0), ((9, 1),),ItemPtr
+			)
+
+	# Result is of type Asset
+	# The method Item is actually a property, but must be used as a method to correctly pass the arguments
+	def Item(self, ItemKey=defaultNamedNotOptArg):
+		'get an element from the collection'
+		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
+			)
+		if ret is not None:
+			ret = Dispatch(ret, u'Item', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	def Remove(self, AssetID=defaultNamedNotOptArg):
+		'Deletes the asset with specified id'
+		return self._oleobj_.InvokeTypes(1799700836, LCID, 1, (24, 0), ((3, 1),),AssetID
+			)
+
+	def RemoveAll(self):
+		return self._oleobj_.InvokeTypes(1380009324, LCID, 1, (24, 0), (),)
+
+	_prop_map_get_ = {
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"Count": (1668183141, 2, (3, 0), (), "Count", None),
+		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
+	}
+	_prop_map_put_ = {
+	}
+	# Default method for this class is 'Item'
+	def __call__(self, ItemKey=defaultNamedNotOptArg):
+		'get an element from the collection'
+		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
+			)
+		if ret is not None:
+			ret = Dispatch(ret, '__call__', '{2A144F2D-BD94-4175-B192-1F8143026200}')
+		return ret
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,2,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, '{2A144F2D-BD94-4175-B192-1F8143026200}')
 	#This class has Count() property - allow len(ob) to provide this
 	def __len__(self):
 		return self._ApplyTypes_(*(1668183141, 2, (3, 0), (), "Count", None))
@@ -859,7 +1039,7 @@ class Brushes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665286500, LCID, 1, (9, 0), ((8, 1), (12, 17)),BrushDefinition
 			, BrushName)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type Brush
@@ -868,7 +1048,7 @@ class Brushes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665286476, LCID, 1, (9, 0), ((8, 1),),BrushDefinition
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddAndLoad', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddAndLoad', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -882,7 +1062,7 @@ class Brushes(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	_prop_map_get_ = {
@@ -902,8 +1082,13 @@ class Brushes(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20BA-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -950,6 +1135,11 @@ class CharacterAttributes(DispatchBaseClass):
 		"Capitalization": (1883451444, 2, (3, 0), (), "Capitalization", None),
 		"ConnectionForms": (1883451498, 2, (11, 0), (), "ConnectionForms", None),
 		"ContextualLigature": (1883451491, 2, (11, 0), (), "ContextualLigature", None),
+		"DiacVPos": (1883451753, 2, (3, 0), (), "DiacVPos", None),
+		"DiacXOffset": (1883451754, 2, (5, 0), (), "DiacXOffset", None),
+		"DiacYOffset": (1883451755, 2, (5, 0), (), "DiacYOffset", None),
+		"DigitSet": (1883451752, 2, (3, 0), (), "DigitSet", None),
+		"DirOverride": (1883451751, 2, (3, 0), (), "DirOverride", None),
 		"Direction": (1884565561, 2, (3, 0), (), "Direction", None),
 		"DiscretionaryLigature": (1883451490, 2, (11, 0), (), "DiscretionaryLigature", None),
 		"FigureStyle": (1883451501, 2, (3, 0), (), "FigureStyle", None),
@@ -957,6 +1147,9 @@ class CharacterAttributes(DispatchBaseClass):
 		"Fractions": (1883451494, 2, (11, 0), (), "Fractions", None),
 		"HorizontalScale": (1884510296, 2, (5, 0), (), "HorizontalScale", None),
 		"Italics": (1883451506, 2, (11, 0), (), "Italics", None),
+		"JustificationAlternates": (1883451757, 2, (11, 0), (), "JustificationAlternates", None),
+		"Kana": (1883451504, 2, (11, 0), (), "Kana", None),
+		"Kashidas": (1883451750, 2, (3, 0), (), "Kashidas", None),
 		"KerningMethod": (1884566070, 2, (3, 0), (), "KerningMethod", None),
 		"Language": (1883451508, 2, (3, 0), (), "Language", None),
 		"Leading": (1884565557, 2, (5, 0), (), "Leading", None),
@@ -976,6 +1169,7 @@ class CharacterAttributes(DispatchBaseClass):
 		"StrokeColor": (1634292547, 2, (9, 0), (), "StrokeColor", None),
 		"StrokeWeight": (1883451705, 2, (5, 0), (), "StrokeWeight", None),
 		"StylisticAlternates": (1883451499, 2, (11, 0), (), "StylisticAlternates", None),
+		"StylisticSets": (1883451758, 2, (3, 0), (), "StylisticSets", None),
 		"Swash": (1883451496, 2, (11, 0), (), "Swash", None),
 		"TateChuYokoHorizontal": (1883451699, 2, (3, 0), (), "TateChuYokoHorizontal", None),
 		"TateChuYokoVertical": (1883451698, 2, (3, 0), (), "TateChuYokoVertical", None),
@@ -1007,6 +1201,11 @@ class CharacterAttributes(DispatchBaseClass):
 		"Capitalization": ((1883451444, LCID, 4, 0),()),
 		"ConnectionForms": ((1883451498, LCID, 4, 0),()),
 		"ContextualLigature": ((1883451491, LCID, 4, 0),()),
+		"DiacVPos": ((1883451753, LCID, 4, 0),()),
+		"DiacXOffset": ((1883451754, LCID, 4, 0),()),
+		"DiacYOffset": ((1883451755, LCID, 4, 0),()),
+		"DigitSet": ((1883451752, LCID, 4, 0),()),
+		"DirOverride": ((1883451751, LCID, 4, 0),()),
 		"Direction": ((1884565561, LCID, 4, 0),()),
 		"DiscretionaryLigature": ((1883451490, LCID, 4, 0),()),
 		"FigureStyle": ((1883451501, LCID, 4, 0),()),
@@ -1014,6 +1213,9 @@ class CharacterAttributes(DispatchBaseClass):
 		"Fractions": ((1883451494, LCID, 4, 0),()),
 		"HorizontalScale": ((1884510296, LCID, 4, 0),()),
 		"Italics": ((1883451506, LCID, 4, 0),()),
+		"JustificationAlternates": ((1883451757, LCID, 4, 0),()),
+		"Kana": ((1883451504, LCID, 4, 0),()),
+		"Kashidas": ((1883451750, LCID, 4, 0),()),
 		"KerningMethod": ((1884566070, LCID, 4, 0),()),
 		"Language": ((1883451508, LCID, 4, 0),()),
 		"Leading": ((1884565557, LCID, 4, 0),()),
@@ -1032,6 +1234,7 @@ class CharacterAttributes(DispatchBaseClass):
 		"StrokeColor": ((1634292547, LCID, 4, 0),()),
 		"StrokeWeight": ((1883451705, LCID, 4, 0),()),
 		"StylisticAlternates": ((1883451499, LCID, 4, 0),()),
+		"StylisticSets": ((1883451758, LCID, 4, 0),()),
 		"Swash": ((1883451496, LCID, 4, 0),()),
 		"TateChuYokoHorizontal": ((1883451699, LCID, 4, 0),()),
 		"TateChuYokoVertical": ((1883451698, LCID, 4, 0),()),
@@ -1105,7 +1308,7 @@ class CharacterStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665356628, LCID, 1, (9, 0), ((8, 1),),Name
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{7C1FA60D-BF8F-4C43-B14C-77D842034966}')
+			ret = Dispatch(ret, u'Add', '{7C1FA60D-BF8F-4C43-B14C-77D842034966}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -1119,7 +1322,7 @@ class CharacterStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{7C1FA60D-BF8F-4C43-B14C-77D842034966}')
+			ret = Dispatch(ret, u'Item', '{7C1FA60D-BF8F-4C43-B14C-77D842034966}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -1147,8 +1350,13 @@ class CharacterStyles(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{7C1FA60D-BF8F-4C43-B14C-77D842034966}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -1176,7 +1384,7 @@ class Characters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1667784992, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),Contents
 			, RelativeObject, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type TextRange
@@ -1184,7 +1392,7 @@ class Characters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1131561574, LCID, 1, (9, 0), ((8, 1),),Contents
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -1198,7 +1406,7 @@ class Characters(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -1226,8 +1434,13 @@ class Characters(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -1276,7 +1489,7 @@ class CompoundPathItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -1393,6 +1606,7 @@ class CompoundPathItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -1442,7 +1656,7 @@ class CompoundPathItems(DispatchBaseClass):
 		'create a compound path item'
 		ret = self._oleobj_.InvokeTypes(1667318627, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20BE-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20BE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -1456,7 +1670,7 @@ class CompoundPathItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20BE-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20BE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -1484,8 +1698,13 @@ class CompoundPathItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20BE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -1546,7 +1765,7 @@ class DataSets(DispatchBaseClass):
 		'create a data set'
 		ret = self._oleobj_.InvokeTypes(1950634868, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Add', '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -1560,7 +1779,7 @@ class DataSets(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -1588,8 +1807,13 @@ class DataSets(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -1622,7 +1846,7 @@ class Document(DispatchBaseClass):
 
 	def ConvertCoordinate(self, Coordinate=defaultNamedNotOptArg, Source=defaultNamedNotOptArg, Destination=defaultNamedNotOptArg):
 		'Converts the coordinate system of a single point from one coordinate system to another.'
-		return self._ApplyTypes_(1130590052, 1, (12, 0), ((12, 1), (3, 1), (3, 1)), 'ConvertCoordinate', None,Coordinate
+		return self._ApplyTypes_(1130590052, 1, (12, 0), ((12, 1), (3, 1), (3, 1)), u'ConvertCoordinate', None,Coordinate
 			, Source, Destination)
 
 	def Copy(self):
@@ -1637,6 +1861,12 @@ class Document(DispatchBaseClass):
 		'Export the specified document(s)'
 		return self._oleobj_.InvokeTypes(1162112867, LCID, 1, (24, 0), ((8, 1), (3, 1), (12, 17)),ExportFile
 			, ExportFormat, Options)
+
+	def ExportForScreens(self, ExportFolder=defaultNamedNotOptArg, ExportFormat=defaultNamedNotOptArg, Options=defaultNamedOptArg, ItemToExport=defaultNamedOptArg
+			, FileNamePrefix=defaultNamedOptArg):
+		'Export the specified document/asset(s)/artboard(s)'
+		return self._oleobj_.InvokeTypes(1095976260, LCID, 1, (24, 0), ((8, 1), (3, 1), (12, 17), (12, 17), (12, 17)),ExportFolder
+			, ExportFormat, Options, ItemToExport, FileNamePrefix)
 
 	def ExportPDFPreset(self, File=defaultNamedNotOptArg):
 		'save all PDF presets to a file'
@@ -1673,6 +1903,14 @@ class Document(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(1432441665, LCID, 1, (11, 0), ((12, 17),),Index
 			)
 
+	def GetPageItemFromUuid(self, Uuid=defaultNamedNotOptArg):
+		'Retrieves the pageitem using Uuid'
+		ret = self._oleobj_.InvokeTypes(1198549348, LCID, 1, (9, 0), ((8, 1),),Uuid
+			)
+		if ret is not None:
+			ret = Dispatch(ret, u'GetPageItemFromUuid', None)
+		return ret
+
 	def GetPerspectiveActivePlane(self):
 		'Gets the active plane of the active perspective grid of the document'
 		return self._oleobj_.InvokeTypes(1348952400, LCID, 1, (3, 0), (),)
@@ -1692,11 +1930,12 @@ class Document(DispatchBaseClass):
 			)
 
 	def ImportFileIntoDocument(self, ImportFile=defaultNamedNotOptArg, IsLinked=defaultNamedNotOptArg, LibraryName=defaultNamedOptArg, ItemName=defaultNamedOptArg
-			, ElementRef=defaultNamedOptArg, ModifiedTime=defaultNamedOptArg, CreationTime=defaultNamedOptArg, AdobeStockId=defaultNamedOptArg, AdobeStockLicense=defaultNamedOptArg):
+			, ElementRef=defaultNamedOptArg, ModifiedTime=defaultNamedOptArg, CreationTime=defaultNamedOptArg, AdobeStockId=defaultNamedOptArg, AdobeStockLicense=defaultNamedOptArg
+			, ShouldLoadToPlaceGun=defaultNamedOptArg):
 		'Import the file into current Ai document'
-		return self._oleobj_.InvokeTypes(1229351276, LCID, 1, (24, 0), ((8, 1), (11, 1), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),ImportFile
+		return self._oleobj_.InvokeTypes(1229351276, LCID, 1, (24, 0), ((8, 1), (11, 1), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),ImportFile
 			, IsLinked, LibraryName, ItemName, ElementRef, ModifiedTime
-			, CreationTime, AdobeStockId, AdobeStockLicense)
+			, CreationTime, AdobeStockId, AdobeStockLicense, ShouldLoadToPlaceGun)
 
 	def ImportPDFPreset(self, FileSpec=defaultNamedNotOptArg, ReplacingPreset=defaultNamedOptArg):
 		'load all PDF presets from a file'
@@ -1742,7 +1981,7 @@ class Document(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1800552787, LCID, 1, (9, 0), ((12, 1), (12, 17), (12, 17)),SourceArt
 			, ClipBounds, Options)
 		if ret is not None:
-			ret = Dispatch(ret, 'Rasterize', None)
+			ret = Dispatch(ret, u'Rasterize', None)
 		return ret
 
 	def RearrangeArtboards(self, ArtboardLayout=defaultNamedOptArg, ArtboardRowsOrCols=defaultNamedOptArg, ArtboardSpacing=defaultNamedOptArg, ArtboardMoveArtwork=defaultNamedOptArg):
@@ -1797,6 +2036,11 @@ class Document(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(1632196419, LCID, 1, (24, 0), ((8, 1), (12, 1)),ImageFile
 			, WindowSize)
 
+	def WriteAsLibrary(self, File=defaultNamedNotOptArg, LibraryType=defaultNamedNotOptArg):
+		'Write the document to a file as a library of specified type'
+		return self._oleobj_.InvokeTypes(1465994345, LCID, 1, (24, 0), ((8, 1), (3, 1)),File
+			, LibraryType)
+
 	_prop_map_get_ = {
 		# Method 'ActiveDataSet' returns object of type 'DataSet'
 		"ActiveDataSet": (1883521348, 2, (9, 0), (), "ActiveDataSet", '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}'),
@@ -1808,6 +2052,8 @@ class Document(DispatchBaseClass):
 		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
 		# Method 'Artboards' returns object of type 'Artboards'
 		"Artboards": (1682533681, 2, (9, 0), (), "Artboards", '{091ADAF8-D422-11DB-8314-0800200C9A66}'),
+		# Method 'Assets' returns object of type 'Assets'
+		"Assets": (1665483123, 2, (9, 0), (), "Assets", '{E3A43D4E-69EB-4844-ACB1-35B8686CA0A8}'),
 		# Method 'Brushes' returns object of type 'Brushes'
 		"Brushes": (1667318354, 2, (9, 0), (), "Brushes", '{95CD20E8-AD72-11D3-B086-0010A4F5C335}'),
 		# Method 'CharacterStyles' returns object of type 'CharacterStyles'
@@ -1958,7 +2204,7 @@ class Documents(DispatchBaseClass):
 			, Width, Height, NumArtboards, ArtboardLayout, ArtboardSpacing
 			, ArtboardRowsOrCols)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type Document
@@ -1967,7 +2213,7 @@ class Documents(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665421123, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),StartupPreset
 			, PresetSettings, ShowOptionsDialog)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddDocument', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddDocument', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type Document
@@ -1976,7 +2222,7 @@ class Documents(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665226575, LCID, 1, (9, 0), ((8, 1), (12, 17)),StartupPreset
 			, ShowOptionsDialog)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddDocumentWithDialogOption', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddDocumentWithDialogOption', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Arrange(self, LayoutStyle=defaultNamedNotOptArg):
@@ -1995,7 +2241,7 @@ class Documents(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	_prop_map_get_ = {
@@ -2015,8 +2261,13 @@ class Documents(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2065,7 +2316,7 @@ class EmbedItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -2181,6 +2432,7 @@ class EmbedItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -2231,7 +2483,7 @@ class EmbeddedItems(DispatchBaseClass):
 		'create an embedded item'
 		ret = self._oleobj_.InvokeTypes(1665486924, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{96C13549-5237-4492-8345-2DB9FB6512BE}')
+			ret = Dispatch(ret, u'Add', '{96C13549-5237-4492-8345-2DB9FB6512BE}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -2245,7 +2497,7 @@ class EmbeddedItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{96C13549-5237-4492-8345-2DB9FB6512BE}')
+			ret = Dispatch(ret, u'Item', '{96C13549-5237-4492-8345-2DB9FB6512BE}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -2273,8 +2525,13 @@ class EmbeddedItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{96C13549-5237-4492-8345-2DB9FB6512BE}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2368,7 +2625,7 @@ class GradientStops(DispatchBaseClass):
 		'create a gradient stop'
 		ret = self._oleobj_.InvokeTypes(1667319635, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20AF-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20AF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -2382,7 +2639,7 @@ class GradientStops(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20AF-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20AF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -2410,8 +2667,13 @@ class GradientStops(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20AF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2438,7 +2700,7 @@ class Gradients(DispatchBaseClass):
 		'create a gradient'
 		ret = self._oleobj_.InvokeTypes(1667319620, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20AE-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20AE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -2452,7 +2714,7 @@ class Gradients(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20AE-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20AE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -2480,8 +2742,13 @@ class Gradients(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20AE-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2530,7 +2797,7 @@ class GraphItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -2646,6 +2913,7 @@ class GraphItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -2701,7 +2969,7 @@ class GraphItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -2729,8 +2997,13 @@ class GraphItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2799,7 +3072,7 @@ class GraphicStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20BB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20BB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -2827,8 +3100,13 @@ class GraphicStyles(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20BB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -2877,7 +3155,7 @@ class GroupItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -3023,6 +3301,7 @@ class GroupItem(DispatchBaseClass):
 		"TextFrames": (1666472033, 2, (9, 0), (), "TextFrames", '{3CC63F1C-EA9C-4636-A16C-63808C42691E}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -3073,7 +3352,7 @@ class GroupItems(DispatchBaseClass):
 		'create a group item'
 		ret = self._oleobj_.InvokeTypes(1667319651, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type GroupItem
@@ -3082,7 +3361,7 @@ class GroupItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1164789347, LCID, 1, (9, 0), ((8, 1),),ImageFile
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'CreateFromFile', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'CreateFromFile', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -3096,7 +3375,7 @@ class GroupItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -3124,8 +3403,13 @@ class GroupItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -3190,7 +3474,7 @@ class InsertionPoints(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	_prop_map_get_ = {
@@ -3210,8 +3494,13 @@ class InsertionPoints(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -3358,7 +3647,7 @@ class Layers(DispatchBaseClass):
 		'create a layer'
 		ret = self._oleobj_.InvokeTypes(1667320931, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20AC-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20AC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -3372,7 +3661,7 @@ class Layers(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20AC-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20AC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -3400,8 +3689,13 @@ class Layers(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20AC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -3438,7 +3732,7 @@ class LegacyTextItem(DispatchBaseClass):
 		'create a native text frame from a legacy text item. The original legacy text item is deleted.'
 		ret = self._oleobj_.InvokeTypes(1131695700, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConvertToNative', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ConvertToNative', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Copy(self):
@@ -3458,7 +3752,7 @@ class LegacyTextItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -3574,6 +3868,7 @@ class LegacyTextItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -3633,7 +3928,7 @@ class LegacyTextItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def RemoveAll(self):
@@ -3656,8 +3951,13 @@ class LegacyTextItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -3690,7 +3990,7 @@ class Lines(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def RemoveAll(self):
@@ -3713,8 +4013,13 @@ class Lines(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -3763,7 +4068,7 @@ class MeshItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -3878,6 +4183,7 @@ class MeshItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -3932,7 +4238,7 @@ class MeshItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C4-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C4-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -3960,8 +4266,13 @@ class MeshItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C4-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4010,7 +4321,7 @@ class NonNativeItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -4125,6 +4436,7 @@ class NonNativeItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -4179,7 +4491,7 @@ class NonNativeItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}')
+			ret = Dispatch(ret, u'Item', '{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}')
 		return ret
 
 	def RemoveAll(self):
@@ -4202,8 +4514,13 @@ class NonNativeItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4229,12 +4546,16 @@ class PDFFileOptions(DispatchBaseClass):
 		# Method 'Application' returns object of type '_Application'
 		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
 		"PDFCropToBox": (1884312625, 2, (3, 0), (), "PDFCropToBox", None),
+		"PageRangeToOpen": (1884312626, 2, (8, 0), (), "PageRangeToOpen", None),
 		"PageToOpen": (1884312655, 2, (3, 0), (), "PageToOpen", None),
 		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
+		"PlaceAsLinks": (1884312627, 2, (11, 0), (), "PlaceAsLinks", None),
 	}
 	_prop_map_put_ = {
 		"PDFCropToBox": ((1884312625, LCID, 4, 0),()),
+		"PageRangeToOpen": ((1884312626, LCID, 4, 0),()),
 		"PageToOpen": ((1884312655, LCID, 4, 0),()),
+		"PlaceAsLinks": ((1884312627, LCID, 4, 0),()),
 	}
 	def __iter__(self):
 		"Return a Python iterator for this object"
@@ -4259,7 +4580,7 @@ class PageItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', None)
+			ret = Dispatch(ret, u'Item', None)
 		return ret
 
 	def RemoveAll(self):
@@ -4282,8 +4603,13 @@ class PageItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', None)
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4311,6 +4637,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"AutoLeadingAmount": (1666204001, 2, (5, 0), (), "AutoLeadingAmount", None),
 		"BunriKinshi": (1699760696, 2, (11, 0), (), "BunriKinshi", None),
 		"BurasagariType": (1699760697, 2, (3, 0), (), "BurasagariType", None),
+		"ComposerEngine": (1699760744, 2, (3, 0), (), "ComposerEngine", None),
 		"DesiredGlyphScaling": (1666203961, 2, (5, 0), (), "DesiredGlyphScaling", None),
 		"DesiredLetterSpacing": (1884565862, 2, (5, 0), (), "DesiredLetterSpacing", None),
 		"DesiredWordSpacing": (1884565859, 2, (5, 0), (), "DesiredWordSpacing", None),
@@ -4321,6 +4648,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"HyphenationPreference": (1666203956, 2, (5, 0), (), "HyphenationPreference", None),
 		"HyphenationZone": (1666203954, 2, (5, 0), (), "HyphenationZone", None),
 		"Justification": (1884565814, 2, (3, 0), (), "Justification", None),
+		"KashidaWidth": (1699760743, 2, (3, 0), (), "KashidaWidth", None),
 		"Kinsoku": (1665880911, 2, (8, 0), (), "Kinsoku", None),
 		"KinsokuOrder": (1699760737, 2, (3, 0), (), "KinsokuOrder", None),
 		"KurikaeshiMojiShori": (1699760738, 2, (11, 0), (), "KurikaeshiMojiShori", None),
@@ -4337,6 +4665,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"MinimumLetterSpacing": (1884565860, 2, (5, 0), (), "MinimumLetterSpacing", None),
 		"MinimumWordSpacing": (1884565857, 2, (5, 0), (), "MinimumWordSpacing", None),
 		"Mojikumi": (1666009673, 2, (8, 0), (), "Mojikumi", None),
+		"ParagraphDirection": (1699760742, 2, (3, 0), (), "ParagraphDirection", None),
 		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
 		"RightIndent": (1884565813, 2, (5, 0), (), "RightIndent", None),
 		"RomanHanging": (1699760694, 2, (11, 0), (), "RomanHanging", None),
@@ -4349,6 +4678,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"AutoLeadingAmount": ((1666204001, LCID, 4, 0),()),
 		"BunriKinshi": ((1699760696, LCID, 4, 0),()),
 		"BurasagariType": ((1699760697, LCID, 4, 0),()),
+		"ComposerEngine": ((1699760744, LCID, 4, 0),()),
 		"DesiredGlyphScaling": ((1666203961, LCID, 4, 0),()),
 		"DesiredLetterSpacing": ((1884565862, LCID, 4, 0),()),
 		"DesiredWordSpacing": ((1884565859, LCID, 4, 0),()),
@@ -4359,6 +4689,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"HyphenationPreference": ((1666203956, LCID, 4, 0),()),
 		"HyphenationZone": ((1666203954, LCID, 4, 0),()),
 		"Justification": ((1884565814, LCID, 4, 0),()),
+		"KashidaWidth": ((1699760743, LCID, 4, 0),()),
 		"Kinsoku": ((1665880911, LCID, 4, 0),()),
 		"KinsokuOrder": ((1699760737, LCID, 4, 0),()),
 		"KurikaeshiMojiShori": ((1699760738, LCID, 4, 0),()),
@@ -4375,6 +4706,7 @@ class ParagraphAttributes(DispatchBaseClass):
 		"MinimumLetterSpacing": ((1884565860, LCID, 4, 0),()),
 		"MinimumWordSpacing": ((1884565857, LCID, 4, 0),()),
 		"Mojikumi": ((1666009673, LCID, 4, 0),()),
+		"ParagraphDirection": ((1699760742, LCID, 4, 0),()),
 		"RightIndent": ((1884565813, LCID, 4, 0),()),
 		"RomanHanging": ((1699760694, LCID, 4, 0),()),
 		"SingleWordJustification": ((1666203959, LCID, 4, 0),()),
@@ -4440,7 +4772,7 @@ class ParagraphStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1666208596, LCID, 1, (9, 0), ((8, 1),),Name
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}')
+			ret = Dispatch(ret, u'Add', '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -4454,7 +4786,7 @@ class ParagraphStyles(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}')
+			ret = Dispatch(ret, u'Item', '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -4482,8 +4814,13 @@ class ParagraphStyles(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4511,7 +4848,7 @@ class Paragraphs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668309362, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),Contents
 			, RelativeObject, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type TextRange
@@ -4519,7 +4856,7 @@ class Paragraphs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1131561574, LCID, 1, (9, 0), ((8, 1),),Contents
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -4533,7 +4870,7 @@ class Paragraphs(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -4561,8 +4898,13 @@ class Paragraphs(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4611,7 +4953,7 @@ class PathItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -4764,6 +5106,7 @@ class PathItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -4831,7 +5174,7 @@ class PathItems(DispatchBaseClass):
 		'create a path'
 		ret = self._oleobj_.InvokeTypes(1667321955, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type PathItem
@@ -4842,7 +5185,7 @@ class PathItems(DispatchBaseClass):
 			, Left, Width, Height, Reversed, Inscribed
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Ellipse', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Ellipse', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -4856,7 +5199,7 @@ class PathItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type PathItem
@@ -4866,7 +5209,7 @@ class PathItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1935888455, LCID, 1, (9, 0), ((12, 17), (12, 17), (12, 17), (12, 17), (12, 17)),CenterX
 			, CenterY, Radius, Sides, Reversed)
 		if ret is not None:
-			ret = Dispatch(ret, 'Polygon', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Polygon', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type PathItem
@@ -4876,7 +5219,7 @@ class PathItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1935888963, LCID, 1, (9, 0), ((5, 1), (5, 1), (5, 1), (5, 1), (12, 17)),Top
 			, Left, Width, Height, Reversed)
 		if ret is not None:
-			ret = Dispatch(ret, 'Rectangle', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Rectangle', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -4895,7 +5238,7 @@ class PathItems(DispatchBaseClass):
 			, Left, Width, Height, HorizontalRadius, VerticalRadius
 			, Reversed)
 		if ret is not None:
-			ret = Dispatch(ret, 'RoundedRectangle', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'RoundedRectangle', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type PathItem
@@ -4906,7 +5249,7 @@ class PathItems(DispatchBaseClass):
 			, CenterY, Radius, InnerRadius, Points, Reversed
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Star', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Star', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	_prop_map_get_ = {
@@ -4926,8 +5269,13 @@ class PathItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -4988,7 +5336,7 @@ class PathPoints(DispatchBaseClass):
 		'create a path point'
 		ret = self._oleobj_.InvokeTypes(1667321939, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20C1-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20C1-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -5002,7 +5350,7 @@ class PathPoints(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C1-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C1-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -5030,8 +5378,13 @@ class PathPoints(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C1-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -5084,7 +5437,7 @@ class Patterns(DispatchBaseClass):
 		'create a pattern'
 		ret = self._oleobj_.InvokeTypes(1667321940, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20B9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20B9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -5098,7 +5451,7 @@ class Patterns(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20B9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20B9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -5126,8 +5479,13 @@ class Patterns(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20B9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -5208,7 +5566,7 @@ class PlacedItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Embed(self):
@@ -5275,7 +5633,7 @@ class PlacedItem(DispatchBaseClass):
 		'Trace this raster object using default options.  Reorders this placed to the source art.'
 		ret = self._oleobj_.InvokeTypes(1885426802, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Trace', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Trace', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Transform(self, TransformationMatrix=defaultNamedNotOptArg, ChangePositions=defaultNamedOptArg, ChangeFillPatterns=defaultNamedOptArg, ChangeFillGradients=defaultNamedOptArg
@@ -5350,6 +5708,7 @@ class PlacedItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -5401,7 +5760,7 @@ class PlacedItems(DispatchBaseClass):
 		'create a placed item'
 		ret = self._oleobj_.InvokeTypes(1666338892, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20C3-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20C3-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -5415,7 +5774,7 @@ class PlacedItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C3-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C3-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -5443,8 +5802,13 @@ class PlacedItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C3-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -5493,7 +5857,7 @@ class PluginItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -5611,6 +5975,7 @@ class PluginItem(DispatchBaseClass):
 		# Method 'Tracing' returns object of type 'TracingObject'
 		"Tracing": (1735677042, 2, (9, 0), (), "Tracing", '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCE}'),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -5665,7 +6030,7 @@ class PluginItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -5693,8 +6058,13 @@ class PluginItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -5735,6 +6105,11 @@ class Preferences(DispatchBaseClass):
 		'retrieve the value of the application preference key as string type'
 		# Result is a Unicode object
 		return self._oleobj_.InvokeTypes(1884309049, LCID, 1, (8, 0), ((8, 1),),Key
+			)
+
+	def PreferenceExists(self, Key=defaultNamedNotOptArg):
+		'checks whether the application preference key exists'
+		return self._oleobj_.InvokeTypes(1884309061, LCID, 1, (11, 0), ((8, 1),),Key
 			)
 
 	def RemovePreference(self, Key=defaultNamedNotOptArg):
@@ -5820,7 +6195,7 @@ class RasterItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -5878,7 +6253,7 @@ class RasterItem(DispatchBaseClass):
 		'Trace this raster object using default options.  Reorders this raster to the source art.'
 		ret = self._oleobj_.InvokeTypes(1667322994, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Trace', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Trace', '{95CD20C5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Transform(self, TransformationMatrix=defaultNamedNotOptArg, ChangePositions=defaultNamedOptArg, ChangeFillPatterns=defaultNamedOptArg, ChangeFillGradients=defaultNamedOptArg
@@ -5962,6 +6337,7 @@ class RasterItem(DispatchBaseClass):
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"Transparent": (1697934385, 2, (11, 0), (), "Transparent", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -6021,7 +6397,7 @@ class RasterItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20C2-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20C2-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6049,8 +6425,13 @@ class RasterItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20C2-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6078,7 +6459,7 @@ class Spot(DispatchBaseClass):
 
 	def GetInternalColor(self):
 		'Gets the internal color of a spot.'
-		return self._ApplyTypes_(1799833955, 1, (12, 0), (), 'GetInternalColor', None,)
+		return self._ApplyTypes_(1799833955, 1, (12, 0), (), u'GetInternalColor', None,)
 
 	def SetColor(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(1668246642, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -6116,7 +6497,7 @@ class Spots(DispatchBaseClass):
 		'create a spot color'
 		ret = self._oleobj_.InvokeTypes(1667318595, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20B5-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20B5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -6130,7 +6511,7 @@ class Spots(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20B5-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20B5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6158,8 +6539,13 @@ class Spots(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20B5-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6192,7 +6578,7 @@ class Stories(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{8507C961-DE07-440E-A2D8-6D48247ABF79}')
+			ret = Dispatch(ret, u'Item', '{8507C961-DE07-440E-A2D8-6D48247ABF79}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6212,8 +6598,13 @@ class Stories(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{8507C961-DE07-440E-A2D8-6D48247ABF79}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6322,7 +6713,7 @@ class SwatchGroup(DispatchBaseClass):
 
 	def GetAllSwatches(self):
 		'get all swatches in the swatch group'
-		return self._ApplyTypes_(1799831923, 1, (12, 0), (), 'GetAllSwatches', None,)
+		return self._ApplyTypes_(1799831923, 1, (12, 0), (), u'GetAllSwatches', None,)
 
 	_prop_map_get_ = {
 		# Method 'Application' returns object of type '_Application'
@@ -6351,12 +6742,12 @@ class SwatchGroups(DispatchBaseClass):
 		'create a Swatch group'
 		ret = self._oleobj_.InvokeTypes(1666402162, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{75482E9D-B225-419A-8187-EE9EB424138E}')
+			ret = Dispatch(ret, u'Add', '{75482E9D-B225-419A-8187-EE9EB424138E}')
 		return ret
 
 	def GetSelected(self):
 		'get selected swatchGroups in the document'
-		return self._ApplyTypes_(1799446899, 1, (12, 0), (), 'GetSelected', None,)
+		return self._ApplyTypes_(1799446899, 1, (12, 0), (), u'GetSelected', None,)
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
 		return self._oleobj_.InvokeTypes(1885955192, LCID, 1, (3, 0), ((9, 1),),ItemPtr
@@ -6369,7 +6760,7 @@ class SwatchGroups(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{75482E9D-B225-419A-8187-EE9EB424138E}')
+			ret = Dispatch(ret, u'Item', '{75482E9D-B225-419A-8187-EE9EB424138E}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6397,8 +6788,13 @@ class SwatchGroups(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{75482E9D-B225-419A-8187-EE9EB424138E}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6425,12 +6821,12 @@ class Swatches(DispatchBaseClass):
 		'create a swatch'
 		ret = self._oleobj_.InvokeTypes(1667322711, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20B8-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20B8-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def GetSelected(self, IncludeSwatchInGroup=defaultNamedOptArg):
 		'get selected swatches in the document'
-		return self._ApplyTypes_(1632064339, 1, (12, 0), ((12, 17),), 'GetSelected', None,IncludeSwatchInGroup
+		return self._ApplyTypes_(1632064339, 1, (12, 0), ((12, 17),), u'GetSelected', None,IncludeSwatchInGroup
 			)
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -6444,7 +6840,7 @@ class Swatches(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20B8-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20B8-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6472,8 +6868,13 @@ class Swatches(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20B8-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6504,7 +6905,7 @@ class Symbol(DispatchBaseClass):
 		'create a duplicate of the object'
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Duplicate', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	_prop_map_get_ = {
@@ -6560,7 +6961,7 @@ class SymbolItem(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def Move(self, RelativeObject=defaultNamedNotOptArg, InsertionLocation=defaultNamedNotOptArg):
@@ -6677,6 +7078,7 @@ class SymbolItem(DispatchBaseClass):
 		"Tags": (1667322951, 2, (9, 0), (), "Tags", '{95CD20EB-AD72-11D3-B086-0010A4F5C335}'),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -6728,7 +7130,7 @@ class SymbolItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1666339683, LCID, 1, (9, 0), ((9, 1),),Symbol
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Add', '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -6742,7 +7144,7 @@ class SymbolItems(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6770,8 +7172,13 @@ class SymbolItems(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6799,7 +7206,7 @@ class Symbols(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1667322713, LCID, 1, (9, 0), ((9, 1), (12, 17)),SourceArt
 			, RegistrationPoint)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Add', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -6813,7 +7220,7 @@ class Symbols(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6841,8 +7248,13 @@ class Symbols(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6882,8 +7294,13 @@ class Tag(DispatchBaseClass):
 	# Default property for this class is 'Value'
 	def __call__(self):
 		return self._ApplyTypes_(*(1634292822, 2, (8, 0), (), "Value", None))
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6904,7 +7321,7 @@ class Tags(DispatchBaseClass):
 		'create a tag'
 		ret = self._oleobj_.InvokeTypes(1667322951, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20BF-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20BF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -6918,7 +7335,7 @@ class Tags(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20BF-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20BF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -6946,8 +7363,13 @@ class Tags(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20BF-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -6972,6 +7394,7 @@ class TextFont(DispatchBaseClass):
 	_prop_map_get_ = {
 		# Method 'Application' returns object of type '_Application'
 		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"AxisVector": (1181696342, 2, (12, 0), (), "AxisVector", None),
 		"Family": (1886681190, 2, (8, 0), (), "Family", None),
 		"Name": (1886282093, 2, (8, 0), (), "Name", None),
 		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
@@ -7003,7 +7426,7 @@ class TextFonts(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1181696590, LCID, 1, (9, 0), ((8, 1),),FontName
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetFontByName', '{95CD20BC-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetFontByName', '{95CD20BC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -7022,7 +7445,7 @@ class TextFonts(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20BC-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20BC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	_prop_map_get_ = {
@@ -7042,8 +7465,13 @@ class TextFonts(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20BC-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -7080,7 +7508,7 @@ class TextFrame(DispatchBaseClass):
 		'Convert Area Type Text Object To Point Type Object'
 		ret = self._oleobj_.InvokeTypes(1128354896, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConvertAreaObjectToPointObject', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'ConvertAreaObjectToPointObject', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	# Result is of type TextFrame
@@ -7088,7 +7516,7 @@ class TextFrame(DispatchBaseClass):
 		'Convert Point Type Text Object To Area Type Object'
 		ret = self._oleobj_.InvokeTypes(1129337921, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConvertPointObjectToAreaObject', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'ConvertPointObjectToAreaObject', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	def Copy(self):
@@ -7100,7 +7528,7 @@ class TextFrame(DispatchBaseClass):
 		'Convert text item to path items'
 		ret = self._oleobj_.InvokeTypes(1163415620, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'CreateOutline', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'CreateOutline', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Cut(self):
@@ -7116,7 +7544,7 @@ class TextFrame(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', None)
+			ret = Dispatch(ret, u'Duplicate', None)
 		return ret
 
 	def GenerateThumbnailWithTextFrameProperties(self, TextString=defaultNamedNotOptArg, FontSize=defaultNamedNotOptArg, TextColor=defaultNamedNotOptArg, DestinationPath=defaultNamedNotOptArg):
@@ -7276,6 +7704,7 @@ class TextFrame(DispatchBaseClass):
 		"TextSelection": (1936026725, 2, (12, 0), (), "TextSelection", None),
 		"Top": (1414484000, 2, (5, 0), (), "Top", None),
 		"URL": (1884639820, 2, (8, 0), (), "URL", None),
+		"Uuid": (1433758052, 2, (8, 0), (), "Uuid", None),
 		"VisibilityVariable": (1884703062, 2, (12, 0), (), "VisibilityVariable", None),
 		"VisibleBounds": (1634293314, 2, (12, 0), (), "VisibleBounds", None),
 		"Width": (1884506231, 2, (5, 0), (), "Width", None),
@@ -7345,7 +7774,7 @@ class TextFrames(DispatchBaseClass):
 		'create a point text frame item'
 		ret = self._oleobj_.InvokeTypes(1666467434, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'Add', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	# Result is of type TextFrame
@@ -7354,7 +7783,7 @@ class TextFrames(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1665226858, LCID, 1, (9, 0), ((9, 1), (12, 17), (12, 17), (12, 17)),TextPath
 			, Orientation, BaseFrame, PostFix)
 		if ret is not None:
-			ret = Dispatch(ret, 'AreaText', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'AreaText', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -7368,7 +7797,7 @@ class TextFrames(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'Item', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	# Result is of type TextFrame
@@ -7379,7 +7808,7 @@ class TextFrames(DispatchBaseClass):
 			, StartTValue, EndTValue, Orientation, BaseFrame, PostFix
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'PathText', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'PathText', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	# Result is of type TextFrame
@@ -7388,7 +7817,7 @@ class TextFrames(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1666209898, LCID, 1, (9, 0), ((12, 1), (12, 17)),Anchor
 			, Orientation)
 		if ret is not None:
-			ret = Dispatch(ret, 'PointText', '{F0692236-A49A-474D-9745-715426856760}')
+			ret = Dispatch(ret, u'PointText', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -7416,8 +7845,13 @@ class TextFrames(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{F0692236-A49A-474D-9745-715426856760}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -7550,7 +7984,7 @@ class TextRange(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668050798, LCID, 1, (9, 0), ((12, 17), (12, 17)),RelativeObject
 			, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Duplicate', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Duplicate', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def GetParagraphLength(self):
@@ -7637,7 +8071,7 @@ class TextRanges(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def RemoveAll(self):
@@ -7660,8 +8094,13 @@ class TextRanges(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -7689,14 +8128,14 @@ class TracingObject(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1953645912, LCID, 1, (9, 0), ((12, 17),),Viewed
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'ExpandTracing', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ExpandTracing', '{95CD20C6-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def ReleaseTracing(self):
 		'Release the source artwork for the tracing object.  Deletes this tracing object.'
 		ret = self._oleobj_.InvokeTypes(1953649228, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'ReleaseTracing', None)
+			ret = Dispatch(ret, u'ReleaseTracing', None)
 		return ret
 
 	_prop_map_get_ = {
@@ -7827,7 +8266,7 @@ class Variables(DispatchBaseClass):
 		'create a variable'
 		ret = self._oleobj_.InvokeTypes(1951818098, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Add', '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -7841,7 +8280,7 @@ class Variables(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}')
+			ret = Dispatch(ret, u'Item', '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -7869,8 +8308,13 @@ class Variables(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -7899,11 +8343,13 @@ class View(DispatchBaseClass):
 		"CenterPoint": (1634288468, 2, (12, 0), (), "CenterPoint", None),
 		"Parent": (1668574834, 2, (9, 0), (), "Parent", None),
 		"ScreenMode": (1634293325, 2, (3, 0), (), "ScreenMode", None),
+		"VisibleZoom": (1634293338, 2, (5, 0), (), "VisibleZoom", None),
 		"Zoom": (1634294349, 2, (5, 0), (), "Zoom", None),
 	}
 	_prop_map_put_ = {
 		"CenterPoint": ((1634288468, LCID, 4, 0),()),
 		"ScreenMode": ((1634293325, LCID, 4, 0),()),
+		"VisibleZoom": ((1634293338, LCID, 4, 0),()),
 		"Zoom": ((1634294349, LCID, 4, 0),()),
 	}
 	def __iter__(self):
@@ -7930,7 +8376,7 @@ class Views(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20AD-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20AD-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	_prop_map_get_ = {
@@ -7950,8 +8396,13 @@ class Views(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20AD-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -7979,7 +8430,7 @@ class Words(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668771698, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),Contents
 			, RelativeObject, InsertionLocation)
 		if ret is not None:
-			ret = Dispatch(ret, 'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Add', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type TextRange
@@ -7987,7 +8438,7 @@ class Words(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1131561574, LCID, 1, (9, 0), ((8, 1),),Contents
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'AddBefore', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Index(self, ItemPtr=defaultNamedNotOptArg):
@@ -8001,7 +8452,7 @@ class Words(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(0, LCID, 2, (9, 0), ((12, 1),),ItemKey
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Item', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Remove(self, Item=defaultNamedNotOptArg):
@@ -8029,8 +8480,13 @@ class Words(DispatchBaseClass):
 			ret = Dispatch(ret, '__call__', '{95CD20D0-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8050,7 +8506,7 @@ class Words(DispatchBaseClass):
 class _Application(DispatchBaseClass):
 	'The Adobe Illustrator application'
 	CLSID = IID('{95CD20AA-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{0FA36670-F0BC-48C0-AD25-6CF62CAD3A31}')
+	coclass_clsid = IID('{74356B35-AF38-4EA4-A0B8-36A163E4BEE6}')
 
 	# Result is of type _Matrix
 	def ConcatenateMatrix(self, Matrix=defaultNamedNotOptArg, SecondMatrix=defaultNamedNotOptArg):
@@ -8058,7 +8514,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668566360, LCID, 1, (9, 0), ((9, 1), (9, 1)),Matrix
 			, SecondMatrix)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConcatenateMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ConcatenateMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8067,7 +8523,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668567629, LCID, 1, (9, 0), ((9, 1), (5, 1)),Matrix
 			, Angle)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConcatenateRotationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ConcatenateRotationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8076,7 +8532,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668567885, LCID, 1, (9, 0), ((9, 1), (12, 17), (12, 17)),Matrix
 			, ScaleX, ScaleY)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConcatenateScaleMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ConcatenateScaleMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8085,13 +8541,13 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1668569165, LCID, 1, (9, 0), ((9, 1), (12, 17), (12, 17)),Matrix
 			, DeltaX, DeltaY)
 		if ret is not None:
-			ret = Dispatch(ret, 'ConcatenateTranslationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'ConcatenateTranslationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def ConvertSampleColor(self, SourceColorSpace=defaultNamedNotOptArg, SourceColor=defaultNamedNotOptArg, DestColorSpace=defaultNamedNotOptArg, ColorConvertPurpose=defaultNamedNotOptArg
 			, SourceHasAlpha=defaultNamedOptArg, DestHasAlpha=defaultNamedOptArg):
 		'Converts a sample-component color from one color space to another.'
-		return self._ApplyTypes_(1631802179, 1, (12, 0), ((3, 1), (12, 1), (3, 1), (3, 1), (12, 17), (12, 17)), 'ConvertSampleColor', None,SourceColorSpace
+		return self._ApplyTypes_(1631802179, 1, (12, 0), ((3, 1), (12, 1), (3, 1), (3, 1), (12, 17), (12, 17)), u'ConvertSampleColor', None,SourceColorSpace
 			, SourceColor, DestColorSpace, ColorConvertPurpose, SourceHasAlpha, DestHasAlpha
 			)
 
@@ -8135,7 +8591,7 @@ class _Application(DispatchBaseClass):
 		'Returns an identity matrix'
 		ret = self._oleobj_.InvokeTypes(1735674189, LCID, 1, (9, 0), (),)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetIdentityMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetIdentityMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _PPDFileInfo
@@ -8144,7 +8600,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1884308564, LCID, 1, (9, 0), ((8, 1),),Name
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetPPDFileInfo', '{95CD2C09-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetPPDFileInfo', '{95CD2C09-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def GetPresetFileOfType(self, PresetType=defaultNamedNotOptArg):
@@ -8159,7 +8615,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1632063571, LCID, 1, (9, 0), ((8, 1),),Preset
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetPresetSettings', '{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}')
+			ret = Dispatch(ret, u'GetPresetSettings', '{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8168,7 +8624,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1734693453, LCID, 1, (9, 0), ((12, 17),),Angle
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetRotationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetRotationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8177,12 +8633,12 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1734693709, LCID, 1, (9, 0), ((12, 17), (12, 17)),ScaleX
 			, ScaleY)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetScaleMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetScaleMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def GetScriptableHelpGroup(self):
 		'Get the scriptable help group object that represents the search widget in the app bar'
-		return self._ApplyTypes_(1632847943, 1, (12, 0), (), 'GetScriptableHelpGroup', None,)
+		return self._ApplyTypes_(1632847943, 1, (12, 0), (), u'GetScriptableHelpGroup', None,)
 
 	# Result is of type _Matrix
 	def GetTranslationMatrix(self, DeltaX=defaultNamedOptArg, DeltaY=defaultNamedOptArg):
@@ -8190,7 +8646,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1734694989, LCID, 1, (9, 0), ((12, 17), (12, 17)),DeltaX
 			, DeltaY)
 		if ret is not None:
-			ret = Dispatch(ret, 'GetTranslationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'GetTranslationMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type _Matrix
@@ -8199,7 +8655,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1229870701, LCID, 1, (9, 0), ((9, 1),),Matrix
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'InvertMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'InvertMatrix', '{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def IsEqualMatrix(self, Matrix=defaultNamedNotOptArg, SecondMatrix=defaultNamedNotOptArg):
@@ -8244,7 +8700,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1097417551, LCID, 1, (9, 0), ((8, 1), (12, 17), (12, 17)),File
 			, DocumentColorSpace, Options)
 		if ret is not None:
-			ret = Dispatch(ret, 'Open', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'Open', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	# Result is of type Document
@@ -8253,7 +8709,7 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1799439716, LCID, 1, (9, 0), ((8, 1), (8, 1), (8, 1), (12, 17)),AssetURL
 			, ThumbnailURL, AssetType, Options)
 		if ret is not None:
-			ret = Dispatch(ret, 'OpenCloudLibraryAssetForEditing', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
+			ret = Dispatch(ret, u'OpenCloudLibraryAssetForEditing', '{95CD20AB-AD72-11D3-B086-0010A4F5C335}')
 		return ret
 
 	def Paste(self):
@@ -8286,6 +8742,11 @@ class _Application(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(1799451479, LCID, 1, (11, 0), ((8, 1),),WorkspaceName
 			)
 
+	def SelectTool(self, ToolName=defaultNamedNotOptArg):
+		'Select tool using toolname'
+		return self._oleobj_.InvokeTypes(1799443284, LCID, 1, (11, 0), ((8, 1),),ToolName
+			)
+
 	def SendScriptMessage(self, PluginName=defaultNamedNotOptArg, MessageSelector=defaultNamedNotOptArg, InputString=defaultNamedNotOptArg):
 		'sends the script message to the required plugin'
 		# Result is a Unicode object
@@ -8302,12 +8763,17 @@ class _Application(DispatchBaseClass):
 		ret = self._oleobj_.InvokeTypes(1799573611, LCID, 1, (9, 0), ((9, 1),),Color
 			)
 		if ret is not None:
-			ret = Dispatch(ret, 'ShowColorPicker', None)
+			ret = Dispatch(ret, u'ShowColorPicker', None)
 		return ret
+
+	def ShowLearnPanelWithContent(self, Manifest=defaultNamedNotOptArg, HTMLPage=defaultNamedNotOptArg):
+		'Display learn panel with specific content'
+		return self._oleobj_.InvokeTypes(1800165187, LCID, 1, (11, 0), ((8, 1), (8, 1)),Manifest
+			, HTMLPage)
 
 	def ShowPresets(self, FileSpec=defaultNamedNotOptArg):
 		'get presets from the file'
-		return self._ApplyTypes_(1632850003, 1, (12, 0), ((8, 1),), 'ShowPresets', None,FileSpec
+		return self._ApplyTypes_(1632850003, 1, (12, 0), ((8, 1),), u'ShowPresets', None,FileSpec
 			)
 
 	def SwitchWorkspace(self, WorkspaceName=defaultNamedNotOptArg):
@@ -8350,6 +8816,7 @@ class _Application(DispatchBaseClass):
 		"Documents": (1685021557, 2, (9, 0), (), "Documents", '{95CD20DB-AD72-11D3-B086-0010A4F5C335}'),
 		"FlattenerPresetsList": (1883657036, 2, (12, 0), (), "FlattenerPresetsList", None),
 		"FreeMemory": (1634289229, 2, (3, 0), (), "FreeMemory", None),
+		"HomeScreenVisible": (1749898070, 2, (11, 0), (), "HomeScreenVisible", None),
 		"Locale": (1883324748, 2, (8, 0), (), "Locale", None),
 		"Name": (1886282093, 2, (8, 0), (), "Name", None),
 		"PDFPresetsList": (1883525964, 2, (12, 0), (), "PDFPresetsList", None),
@@ -8390,7 +8857,7 @@ class _Application(DispatchBaseClass):
 class _CMYKColor(DispatchBaseClass):
 	'A CMYK color specification'
 	CLSID = IID('{95CD20B2-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{9AFB43D8-2ABA-4DE9-A3E1-617AAA863C22}')
+	coclass_clsid = IID('{FDFC31E3-E09F-4311-B021-297CBD9BD5E8}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -8416,8 +8883,13 @@ class _CMYKColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8431,7 +8903,7 @@ class _CMYKColor(DispatchBaseClass):
 class _Dimensions(DispatchBaseClass):
 	'Dimensions (height and width)'
 	CLSID = IID('{95CD20B1-AD72-11D3-B086-0010A7F5C335}')
-	coclass_clsid = IID('{40A7C4A8-EFD2-43A8-806F-5B0CCE61DCE6}')
+	coclass_clsid = IID('{84B2513B-142B-454D-B618-B0C9C55E90F5}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -8453,8 +8925,13 @@ class _Dimensions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8468,7 +8945,7 @@ class _Dimensions(DispatchBaseClass):
 class _DocumentPreset(DispatchBaseClass):
 	'the new document preset to use for creating a new document'
 	CLSID = IID('{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}')
-	coclass_clsid = IID('{E2D4A432-9E16-41E6-BCA5-062890269CD1}')
+	coclass_clsid = IID('{65A81A10-85AE-46B1-B2F6-E475B852139D}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -8514,8 +8991,13 @@ class _DocumentPreset(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8529,7 +9011,7 @@ class _DocumentPreset(DispatchBaseClass):
 class _EPSSaveOptions(DispatchBaseClass):
 	'Options which may be supplied when saving a document as an Illustrator EPS file'
 	CLSID = IID('{95CD20A7-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{F07FD4A3-5651-47DA-AC33-91BC06403816}')
+	coclass_clsid = IID('{99D7941A-05F9-419A-BA50-4C6148B54187}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -8573,8 +9055,309 @@ class _EPSSaveOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensItemToExport(DispatchBaseClass):
+	'An item that needs to be exported; for example, a document, artboard, or asset'
+	CLSID = IID('{4028B58C-1543-4B0B-A73B-4783B12BD760}')
+	coclass_clsid = IID('{38AE003B-0E4B-4EB8-8D21-DB5ECCBD5624}')
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"Artboards": (1884304483, 2, (8, 0), (), "Artboards", None),
+		"Assets": (1950433619, 2, (12, 0), (), "Assets", None),
+		"Document": (1950434383, 2, (11, 0), (), "Document", None),
+	}
+	_prop_map_put_ = {
+		"Artboards": ((1884304483, LCID, 4, 0),()),
+		"Assets": ((1950433619, LCID, 4, 0),()),
+		"Document": ((1950434383, LCID, 4, 0),()),
+		"ObjectValue": ((0, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensOptionsJPEG(DispatchBaseClass):
+	'Options which may be provided when exporting a document as a JPEG100 file'
+	CLSID = IID('{97DDAA0B-4235-4E6F-B13C-FE850F759964}')
+	coclass_clsid = IID('{4A99261F-223B-4980-B746-9960895D74BB}')
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		"AntiAliasing": (1951678785, 2, (3, 0), (), "AntiAliasing", None),
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"CompressionMethod": (1950434128, 2, (3, 0), (), "CompressionMethod", None),
+		"EmbedICCProfile": (1883590758, 2, (11, 0), (), "EmbedICCProfile", None),
+		"ProgressiveScan": (1950437459, 2, (3, 0), (), "ProgressiveScan", None),
+		"ScaleType": (1950438228, 2, (3, 0), (), "ScaleType", None),
+		"ScaleTypeValue": (1950438230, 2, (5, 0), (), "ScaleTypeValue", None),
+	}
+	_prop_map_put_ = {
+		"AntiAliasing": ((1951678785, LCID, 4, 0),()),
+		"CompressionMethod": ((1950434128, LCID, 4, 0),()),
+		"EmbedICCProfile": ((1883590758, LCID, 4, 0),()),
+		"ObjectValue": ((0, LCID, 4, 0),()),
+		"ProgressiveScan": ((1950437459, LCID, 4, 0),()),
+		"ScaleType": ((1950438228, LCID, 4, 0),()),
+		"ScaleTypeValue": ((1950438230, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensOptionsPNG24(DispatchBaseClass):
+	'Options which may be provided when exporting a document as an 24 bit PNG file'
+	CLSID = IID('{561231EA-87C6-4F37-B8A0-053CAE2AB706}')
+	coclass_clsid = IID('{D8773E95-0FBB-45E2-9755-C929F86CBFBD}')
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		"AntiAliasing": (1950433613, 2, (3, 0), (), "AntiAliasing", None),
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"BackgroundBlack": (1951613506, 2, (11, 0), (), "BackgroundBlack", None),
+		"Interlaced": (1883860556, 2, (11, 0), (), "Interlaced", None),
+		"ScaleType": (1950438228, 2, (3, 0), (), "ScaleType", None),
+		"ScaleTypeValue": (1950438230, 2, (5, 0), (), "ScaleTypeValue", None),
+		"Transparency": (1884581987, 2, (11, 0), (), "Transparency", None),
+	}
+	_prop_map_put_ = {
+		"AntiAliasing": ((1950433613, LCID, 4, 0),()),
+		"BackgroundBlack": ((1951613506, LCID, 4, 0),()),
+		"Interlaced": ((1883860556, LCID, 4, 0),()),
+		"ObjectValue": ((0, LCID, 4, 0),()),
+		"ScaleType": ((1950438228, LCID, 4, 0),()),
+		"ScaleTypeValue": ((1950438230, LCID, 4, 0),()),
+		"Transparency": ((1884581987, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensOptionsPNG8(DispatchBaseClass):
+	'Options which may be provided when exporting a document as an 8 bit PNG file'
+	CLSID = IID('{713F68D4-459C-4229-AB12-526A71A19698}')
+	coclass_clsid = IID('{98C0ECCB-F1BC-4CEF-9A51-B9F06E40C52E}')
+
+	def SetMatteColor(self, arg0=defaultUnnamedArg):
+		'The color to use when matting the artboard (default: white)'
+		return self._oleobj_.InvokeTypes(1884111724, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		"AntiAliasing": (1950433613, 2, (3, 0), (), "AntiAliasing", None),
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"ColorCount": (1883466819, 2, (3, 0), (), "ColorCount", None),
+		"Interlaced": (1883860556, 2, (11, 0), (), "Interlaced", None),
+		"Matte": (1884111170, 2, (11, 0), (), "Matte", None),
+		# Method 'MatteColor' returns object of type '_RGBColor'
+		"MatteColor": (1884111724, 2, (9, 0), (), "MatteColor", '{95CD20B1-AD72-11D3-B086-0010A4F5C335}'),
+		"ScaleType": (1950438228, 2, (3, 0), (), "ScaleType", None),
+		"ScaleTypeValue": (1950438230, 2, (5, 0), (), "ScaleTypeValue", None),
+		"Transparency": (1884581987, 2, (11, 0), (), "Transparency", None),
+	}
+	_prop_map_put_ = {
+		"AntiAliasing": ((1950433613, LCID, 4, 0),()),
+		"ColorCount": ((1883466819, LCID, 4, 0),()),
+		"Interlaced": ((1883860556, LCID, 4, 0),()),
+		"Matte": ((1884111170, LCID, 4, 0),()),
+		"MatteColor": ((1884111724, LCID, 4, 0),()),
+		"ObjectValue": ((0, LCID, 4, 0),()),
+		"ScaleType": ((1950438228, LCID, 4, 0),()),
+		"ScaleTypeValue": ((1950438230, LCID, 4, 0),()),
+		"Transparency": ((1884581987, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensOptionsWebOptimizedSVG(DispatchBaseClass):
+	'Options which may be provided when exporting a document as a web optimized SVG file'
+	CLSID = IID('{1BD449AE-95C1-496B-9BDD-32AEB30CA819}')
+	coclass_clsid = IID('{4F9C4A42-947D-40B0-BB12-266B735321BE}')
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"CSSProperties": (1883460435, 2, (3, 0), (), "CSSProperties", None),
+		"CoordinatePrecision": (1883530064, 2, (3, 0), (), "CoordinatePrecision", None),
+		"FontType": (1883657305, 2, (3, 0), (), "FontType", None),
+		"RasterImageLocation": (1884440919, 2, (3, 0), (), "RasterImageLocation", None),
+		"SVGId": (1883849812, 2, (3, 0), (), "SVGId", None),
+		"SVGMinify": (1883329357, 2, (11, 0), (), "SVGMinify", None),
+		"SVGResponsive": (1883853395, 2, (11, 0), (), "SVGResponsive", None),
+	}
+	_prop_map_put_ = {
+		"CSSProperties": ((1883460435, LCID, 4, 0),()),
+		"CoordinatePrecision": ((1883530064, LCID, 4, 0),()),
+		"FontType": ((1883657305, LCID, 4, 0),()),
+		"ObjectValue": ((0, LCID, 4, 0),()),
+		"RasterImageLocation": ((1884440919, LCID, 4, 0),()),
+		"SVGId": ((1883849812, LCID, 4, 0),()),
+		"SVGMinify": ((1883329357, LCID, 4, 0),()),
+		"SVGResponsive": ((1883853395, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
+	def __int__(self, *args):
+		return int(self.__call__(*args))
+	def __iter__(self):
+		"Return a Python iterator for this object"
+		try:
+			ob = self._oleobj_.InvokeTypes(-4,LCID,3,(13, 10),())
+		except pythoncom.error:
+			raise TypeError("This object does not support enumeration")
+		return win32com.client.util.Iterator(ob, None)
+
+class _ExportForScreensPDFOptions(DispatchBaseClass):
+	'Options which may be provided when exporting a document as a PDF file.'
+	CLSID = IID('{DB10BDB0-CC74-49DC-B9C6-8069AF4765BB}')
+	coclass_clsid = IID('{C97944EF-40B3-4D40-A3E6-F8F11AC5A3D9}')
+
+	def SetObjectValue(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	_prop_map_get_ = {
+		# Method 'Application' returns object of type '_Application'
+		"Application": (1667330160, 2, (9, 0), (), "Application", '{95CD20AA-AD72-11D3-B086-0010A4F5C335}'),
+		"PDFPreset": (1883131731, 2, (8, 0), (), "PDFPreset", None),
+	}
+	_prop_map_put_ = {
+		"ObjectValue": ((0, LCID, 4, 0),()),
+		"PDFPreset": ((1883131731, LCID, 4, 0),()),
+	}
+	# Default method for this class is 'ObjectValue'
+	def __call__(self, arg0=defaultUnnamedArg):
+		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
+			)
+
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
+	def __str__(self, *args):
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8588,7 +9371,7 @@ class _EPSSaveOptions(DispatchBaseClass):
 class _ExportOptionsAutoCAD(DispatchBaseClass):
 	'Options which may be supplied when exporting a document to AutoCAD formats (.dwg or .dxf)'
 	CLSID = IID('{AD25A97A-80BC-4D6A-9E61-7E288DE977CA}')
-	coclass_clsid = IID('{D678C828-971A-4759-8A5D-3FF12C221A22}')
+	coclass_clsid = IID('{4051FDD0-14A2-427F-980F-E75EC23C48F7}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -8628,8 +9411,13 @@ class _ExportOptionsAutoCAD(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8643,7 +9431,7 @@ class _ExportOptionsAutoCAD(DispatchBaseClass):
 class _ExportOptionsFlash(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as an Flash (.SWF) file'
 	CLSID = IID('{4C78DF9F-7A09-11D4-81A0-00C04F60ECCC}')
-	coclass_clsid = IID('{09534ADA-D2A2-45EB-BD90-8E4D391D306B}')
+	coclass_clsid = IID('{824DDFF0-9068-4173-B684-D4C33E22B8AF}')
 
 	def SetBackgroundColor(self, arg0=defaultUnnamedArg):
 		'the background color'
@@ -8721,8 +9509,13 @@ class _ExportOptionsFlash(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8736,7 +9529,7 @@ class _ExportOptionsFlash(DispatchBaseClass):
 class _ExportOptionsGIF(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as a GIF file'
 	CLSID = IID('{95CD20CD-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{46E4F107-315D-4BDF-BE66-4E33D9596A9A}')
+	coclass_clsid = IID('{53F599B3-4E43-445D-91C9-406AD78F4217}')
 
 	def SetMatteColor(self, arg0=defaultUnnamedArg):
 		'the color to use when matting the artboard (default: white)'
@@ -8790,8 +9583,13 @@ class _ExportOptionsGIF(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8805,7 +9603,7 @@ class _ExportOptionsGIF(DispatchBaseClass):
 class _ExportOptionsJPEG(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as a JPEG file'
 	CLSID = IID('{95CD20CA-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{4C1581E0-3BA8-4CE6-83FC-34EF5F2A9F40}')
+	coclass_clsid = IID('{EB89AAEA-981F-4B6F-B812-985F82987AE2}')
 
 	def SetMatteColor(self, arg0=defaultUnnamedArg):
 		'the color to use when matting the artboard (default: white)'
@@ -8849,8 +9647,13 @@ class _ExportOptionsJPEG(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8864,7 +9667,7 @@ class _ExportOptionsJPEG(DispatchBaseClass):
 class _ExportOptionsPNG24(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as an 24 bit PNG file'
 	CLSID = IID('{95CD20CC-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{668E6292-D51A-4628-9800-4817A6762DF3}')
+	coclass_clsid = IID('{4BA0BEFF-198A-464F-BACF-0BDF3EE23D81}')
 
 	def SetDimensions(self, arg0=defaultUnnamedArg):
 		'Dimensions in which to contain the resulting raster'
@@ -8912,8 +9715,13 @@ class _ExportOptionsPNG24(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8927,7 +9735,7 @@ class _ExportOptionsPNG24(DispatchBaseClass):
 class _ExportOptionsPNG8(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as an 8 bit PNG file'
 	CLSID = IID('{95CD20CB-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{ECF0C759-F01B-4B3B-8922-541C1C163DF3}')
+	coclass_clsid = IID('{A094EBF0-42F9-4B81-B032-01A838AB9863}')
 
 	def SetMatteColor(self, arg0=defaultUnnamedArg):
 		'the color to use when matting the artboard (default: white)'
@@ -8979,8 +9787,13 @@ class _ExportOptionsPNG8(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -8994,7 +9807,7 @@ class _ExportOptionsPNG8(DispatchBaseClass):
 class _ExportOptionsPhotoshop(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as a Photoshop file'
 	CLSID = IID('{A07B43A9-0201-4369-A1B5-8A33C8A0BB23}')
-	coclass_clsid = IID('{1CC2A29F-5B2C-4359-9728-0D1771BDE2B1}')
+	coclass_clsid = IID('{F895631C-DA84-442D-9437-66C5FCD04481}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9044,8 +9857,13 @@ class _ExportOptionsPhotoshop(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9059,7 +9877,7 @@ class _ExportOptionsPhotoshop(DispatchBaseClass):
 class _ExportOptionsSVG(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as an SVG file'
 	CLSID = IID('{95CD20CF-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{8930E841-DD0D-47EB-ACB1-8A37AFDD5A2A}')
+	coclass_clsid = IID('{72FA28E1-CDBE-4901-AE54-65ED3E5CABCF}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9113,8 +9931,13 @@ class _ExportOptionsSVG(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9128,7 +9951,7 @@ class _ExportOptionsSVG(DispatchBaseClass):
 class _ExportOptionsTIFF(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as a TIFF file'
 	CLSID = IID('{2A8F3C5F-B4E3-45BB-89CB-93F062B4F9F1}')
-	coclass_clsid = IID('{A07D1206-AB5A-4BB1-9207-AEBA31A2D652}')
+	coclass_clsid = IID('{93A24F08-D70A-42B1-8B1F-5A7FEC495C64}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9162,8 +9985,13 @@ class _ExportOptionsTIFF(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9177,7 +10005,7 @@ class _ExportOptionsTIFF(DispatchBaseClass):
 class _ExportOptionsWebOptimizedSVG(DispatchBaseClass):
 	'Options which may be supplied when exporting a document as a Web optimized SVG file'
 	CLSID = IID('{4C78DF9F-7A09-11D4-81A0-00C04F60ECCE}')
-	coclass_clsid = IID('{FCB10B56-8002-46AE-A70D-D02783FFA353}')
+	coclass_clsid = IID('{C7D18CB4-B414-48DC-A59A-CD89C4476007}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9213,8 +10041,13 @@ class _ExportOptionsWebOptimizedSVG(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9228,7 +10061,7 @@ class _ExportOptionsWebOptimizedSVG(DispatchBaseClass):
 class _FXGSaveOptions(DispatchBaseClass):
 	'Options which may be supplied when saving a document as an FXG file'
 	CLSID = IID('{500C9AF9-AA54-4941-B544-132E4D285938}')
-	coclass_clsid = IID('{8DA7F9C4-7E22-46BD-BA1D-5517A9F0CD18}')
+	coclass_clsid = IID('{41004195-FCD1-43C7-B910-6D7B6F9DE763}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9268,8 +10101,13 @@ class _FXGSaveOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9283,7 +10121,7 @@ class _FXGSaveOptions(DispatchBaseClass):
 class _GradientColor(DispatchBaseClass):
 	'A Gradient color specification'
 	CLSID = IID('{95CD20B7-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{B2FE80F4-9612-48F9-87AD-B79A905BCBFC}')
+	coclass_clsid = IID('{0A86B191-F1FE-48F5-8BED-E1121B2488F1}')
 
 	def SetMatrix(self, arg0=defaultUnnamedArg):
 		'additional transformation arising from manipulating the path'
@@ -9322,8 +10160,13 @@ class _GradientColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9337,7 +10180,7 @@ class _GradientColor(DispatchBaseClass):
 class _GrayColor(DispatchBaseClass):
 	'A gray color specification'
 	CLSID = IID('{95CD20B3-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{2FEEBDFA-68E5-49AE-BE7B-1A97F09DF8F9}')
+	coclass_clsid = IID('{FFE94CD1-913A-4C37-9610-DBEF313F7ED3}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9357,8 +10200,13 @@ class _GrayColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9372,7 +10220,7 @@ class _GrayColor(DispatchBaseClass):
 class _IllustratorSaveOptions(DispatchBaseClass):
 	'Options which may be supplied when saving a document as an Illustrator file'
 	CLSID = IID('{95CD20A9-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{5C9DB812-A552-4513-8C6B-3D21EFC42605}')
+	coclass_clsid = IID('{898129FA-400E-404F-A15C-7CC2F436C66F}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9410,8 +10258,13 @@ class _IllustratorSaveOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9425,7 +10278,7 @@ class _IllustratorSaveOptions(DispatchBaseClass):
 class _ImageCaptureOptions(DispatchBaseClass):
 	'Options which may be supplied when capturing a portion of the artwork as an 24 bit PNG file'
 	CLSID = IID('{4C78DFEB-7A09-11D4-81A0-00C04F60ECCC}')
-	coclass_clsid = IID('{BD1B34AB-D76C-4DA1-A134-086969C4EDEF}')
+	coclass_clsid = IID('{34519756-85AB-4EF6-9C9F-EFDB41AA858A}')
 
 	def SetMatteColor(self, arg0=defaultUnnamedArg):
 		'the color to use when matting the artboard (default: white)'
@@ -9459,8 +10312,13 @@ class _ImageCaptureOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9474,7 +10332,7 @@ class _ImageCaptureOptions(DispatchBaseClass):
 class _Ink(DispatchBaseClass):
 	"printer's ink"
 	CLSID = IID('{95CD2C10-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{E417157D-29E4-408A-B742-0F908DF8C745}')
+	coclass_clsid = IID('{C93373AB-D66E-47CD-81D1-CC324136B8B2}')
 
 	def SetInkInfo(self, arg0=defaultUnnamedArg):
 		'the ink information'
@@ -9502,8 +10360,13 @@ class _Ink(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9517,7 +10380,7 @@ class _Ink(DispatchBaseClass):
 class _InkInfo(DispatchBaseClass):
 	'Ink information'
 	CLSID = IID('{95CD2C11-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{F4A69A15-7701-4DF4-948D-9E7FBACC0787}')
+	coclass_clsid = IID('{7BF03EDE-608F-4FD2-8516-CFE5C7FF7CE2}')
 
 	def SetCustomColor(self, arg0=defaultUnnamedArg):
 		'the color of the custom ink'
@@ -9558,8 +10421,13 @@ class _InkInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9573,7 +10441,7 @@ class _InkInfo(DispatchBaseClass):
 class _LabColor(DispatchBaseClass):
 	'An Lab color specification'
 	CLSID = IID('{57EDB0EB-8F86-4898-AA88-5D6F47DEE239}')
-	coclass_clsid = IID('{EF57A9D6-A4A8-4136-94C8-8C707F392A92}')
+	coclass_clsid = IID('{6BB14B4A-09A7-4C41-B2B6-CC2BFD483757}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9597,8 +10465,13 @@ class _LabColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9611,7 +10484,7 @@ class _LabColor(DispatchBaseClass):
 
 class _Matrix(DispatchBaseClass):
 	CLSID = IID('{95CD20C9-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{E580BAB8-2188-4312-A007-7449839ACF29}')
+	coclass_clsid = IID('{31771CF4-D747-4D9E-B757-9371D8FC91B3}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9641,8 +10514,13 @@ class _Matrix(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9656,7 +10534,7 @@ class _Matrix(DispatchBaseClass):
 class _NoColor(DispatchBaseClass):
 	"represents the 'none' color"
 	CLSID = IID('{4C78DFE6-7A09-11D4-81A0-00C04F60ECCC}')
-	coclass_clsid = IID('{013C465C-6000-40C3-B7A6-B236B53A672D}')
+	coclass_clsid = IID('{CD2F83CF-7078-42DE-AD8C-AF51EB242093}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9674,8 +10552,13 @@ class _NoColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9689,7 +10572,7 @@ class _NoColor(DispatchBaseClass):
 class _OpenOptions(DispatchBaseClass):
 	'Options which may be supplied when opening a file'
 	CLSID = IID('{60E764BB-CBEE-421F-B706-D228072EBB89}')
-	coclass_clsid = IID('{F95B83D1-94FC-4AF6-99B0-9094BE3AB899}')
+	coclass_clsid = IID('{771DABCC-A731-4DC9-B795-41DE59C7F846}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9723,8 +10606,13 @@ class _OpenOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9738,7 +10626,7 @@ class _OpenOptions(DispatchBaseClass):
 class _PDFSaveOptions(DispatchBaseClass):
 	'Options which may be supplied when saving a document as a PDF file'
 	CLSID = IID('{95CD20A8-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{695B5492-AC6A-479A-A2B1-E8AE9DDE5B40}')
+	coclass_clsid = IID('{241C78A5-28F3-486D-B7A6-112FB2E15067}')
 
 	def SetFlattenerOptions(self, arg0=defaultUnnamedArg):
 		'the printing flattener options'
@@ -9874,8 +10762,13 @@ class _PDFSaveOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9889,7 +10782,7 @@ class _PDFSaveOptions(DispatchBaseClass):
 class _PPDFile(DispatchBaseClass):
 	'a PPD file'
 	CLSID = IID('{95CD2C0C-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{D2DBC561-0DCE-4141-8FE8-2ECA346CED3E}')
+	coclass_clsid = IID('{83F58F01-46AC-41AD-A1A9-51161C3DDC2C}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9917,8 +10810,13 @@ class _PPDFile(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9932,7 +10830,7 @@ class _PPDFile(DispatchBaseClass):
 class _PPDFileInfo(DispatchBaseClass):
 	'PPD file information'
 	CLSID = IID('{95CD2C09-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{EBE15492-1925-4BA2-A987-8F77CB15FCF0}')
+	coclass_clsid = IID('{A14F6060-2F9B-464B-BFA6-2AC21E87DADE}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -9958,8 +10856,13 @@ class _PPDFileInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -9973,7 +10876,7 @@ class _PPDFileInfo(DispatchBaseClass):
 class _Paper(DispatchBaseClass):
 	'paper size'
 	CLSID = IID('{95CD2C0D-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{99044697-4AD8-4B63-A3D8-BBFE4610C844}')
+	coclass_clsid = IID('{584DE2CF-5851-4706-AE18-BEC16020480E}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10001,8 +10904,13 @@ class _Paper(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10016,7 +10924,7 @@ class _Paper(DispatchBaseClass):
 class _PaperInfo(DispatchBaseClass):
 	'Paper information'
 	CLSID = IID('{95CD2C0A-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{2D6EDDEF-62F9-4D38-A0B5-68B576721018}')
+	coclass_clsid = IID('{04A88E02-89A1-44A3-931B-8DAD9631BF8D}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10042,8 +10950,13 @@ class _PaperInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10057,7 +10970,7 @@ class _PaperInfo(DispatchBaseClass):
 class _PatternColor(DispatchBaseClass):
 	'A Pattern color specification'
 	CLSID = IID('{95CD20B6-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{F493FD6F-9E65-4AE4-AED9-AFDA9CF7F3ED}')
+	coclass_clsid = IID('{35222D0F-C3CE-46C5-8D04-56E0A5525C65}')
 
 	def SetMatrix(self, arg0=defaultUnnamedArg):
 		'additional transformation arising from manipulating the path'
@@ -10102,8 +11015,13 @@ class _PatternColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10117,7 +11035,7 @@ class _PatternColor(DispatchBaseClass):
 class _PrintColorManagementOptions(DispatchBaseClass):
 	'the color management options'
 	CLSID = IID('{95CD2C07-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{EBAD60C2-68F6-4D26-A3A2-0AFD276418AC}')
+	coclass_clsid = IID('{5FA89FBE-6A40-44D2-A25E-CB146FB03CDA}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10141,8 +11059,13 @@ class _PrintColorManagementOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10156,7 +11079,7 @@ class _PrintColorManagementOptions(DispatchBaseClass):
 class _PrintColorSeparationOptions(DispatchBaseClass):
 	'Print color separation options'
 	CLSID = IID('{95CD2C02-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{C43D57E6-B94A-4DAD-BEA4-153159D34529}')
+	coclass_clsid = IID('{BF857496-8FFC-44A5-9ABE-762593E1E7C1}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10182,8 +11105,13 @@ class _PrintColorSeparationOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10197,7 +11125,7 @@ class _PrintColorSeparationOptions(DispatchBaseClass):
 class _PrintCoordinateOptions(DispatchBaseClass):
 	'the print coordinate options'
 	CLSID = IID('{95CD2C03-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{42A65455-5260-4F3D-A4FE-33B2C5BF839C}')
+	coclass_clsid = IID('{4BB0A74F-1AD4-420B-BC0C-CC798B127AA2}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10229,8 +11157,13 @@ class _PrintCoordinateOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10244,7 +11177,7 @@ class _PrintCoordinateOptions(DispatchBaseClass):
 class _PrintFlattenerOptions(DispatchBaseClass):
 	'the transparency flattening options'
 	CLSID = IID('{95CD2C12-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{C3BF40DE-EDA0-493B-924A-42FD00D36CEB}')
+	coclass_clsid = IID('{F2FBB042-6B60-48A4-BEB9-C77DB29AA910}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10276,8 +11209,13 @@ class _PrintFlattenerOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10291,7 +11229,7 @@ class _PrintFlattenerOptions(DispatchBaseClass):
 class _PrintFontOptions(DispatchBaseClass):
 	'the font options for printing'
 	CLSID = IID('{95CD2C05-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{FDB1EDFA-8339-4630-A515-6ACFD4102EDD}')
+	coclass_clsid = IID('{C301D89D-C651-447D-94CB-6F605FB00358}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10313,8 +11251,13 @@ class _PrintFontOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10328,7 +11271,7 @@ class _PrintFontOptions(DispatchBaseClass):
 class _PrintJobOptions(DispatchBaseClass):
 	'the print job options'
 	CLSID = IID('{95CD2C01-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{A816141F-0C6E-4F89-846A-0F596AEDAF9F}')
+	coclass_clsid = IID('{6B80700C-766A-4EA1-9CE2-3CC24203E423}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10368,8 +11311,13 @@ class _PrintJobOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10383,7 +11331,7 @@ class _PrintJobOptions(DispatchBaseClass):
 class _PrintOptions(DispatchBaseClass):
 	'the print options'
 	CLSID = IID('{95CD2C00-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{76543789-87FE-43E4-B70C-17089F44F447}')
+	coclass_clsid = IID('{3A1386C2-0D30-4F08-922D-BB021D267140}')
 
 	def SetColorManagementOptions(self, arg0=defaultUnnamedArg):
 		'the printing color management options'
@@ -10481,8 +11429,13 @@ class _PrintOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10496,7 +11449,7 @@ class _PrintOptions(DispatchBaseClass):
 class _PrintPageMarksOptions(DispatchBaseClass):
 	'the page marks options'
 	CLSID = IID('{95CD2C04-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{D41CD84C-C090-4B8F-A7CD-44CCF26C254E}')
+	coclass_clsid = IID('{3BB60A12-8FE2-44FD-A449-5366A3F9A792}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10530,8 +11483,13 @@ class _PrintPageMarksOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10545,7 +11503,7 @@ class _PrintPageMarksOptions(DispatchBaseClass):
 class _PrintPaperOptions(DispatchBaseClass):
 	'the paper options'
 	CLSID = IID('{95CD2C15-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{297CFCE2-7884-400D-AEB1-BAB1BB3CC897}')
+	coclass_clsid = IID('{1D188FA2-9537-42F3-8297-BD6294BA1686}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10573,8 +11531,13 @@ class _PrintPaperOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10588,7 +11551,7 @@ class _PrintPaperOptions(DispatchBaseClass):
 class _PrintPostScriptOptions(DispatchBaseClass):
 	'the PostScript options'
 	CLSID = IID('{95CD2C06-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{F58B5314-DC1D-4283-90C4-2248F6E60C6C}')
+	coclass_clsid = IID('{FEB59B75-1A61-4854-91B2-89EF24594CCB}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10620,8 +11583,13 @@ class _PrintPostScriptOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10635,7 +11603,7 @@ class _PrintPostScriptOptions(DispatchBaseClass):
 class _Printer(DispatchBaseClass):
 	'an installed printer'
 	CLSID = IID('{95CD2C0B-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{081252CB-D855-48B9-9D85-FA9A9981DF81}')
+	coclass_clsid = IID('{11BD3EFB-312F-435E-8297-525E317612BC}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10663,8 +11631,13 @@ class _Printer(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10678,7 +11651,7 @@ class _Printer(DispatchBaseClass):
 class _PrinterInfo(DispatchBaseClass):
 	'printer information'
 	CLSID = IID('{95CD2C08-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{29FEE1EA-CD21-41A6-9340-6219E3E57BB7}')
+	coclass_clsid = IID('{50639364-F8DF-4744-BBC9-C7B8C6751AA2}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10732,8 +11705,13 @@ class _PrinterInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10747,7 +11725,7 @@ class _PrinterInfo(DispatchBaseClass):
 class _RGBColor(DispatchBaseClass):
 	'An RGB color specification'
 	CLSID = IID('{95CD20B1-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{6707D262-70F2-423D-88E1-ADCE85B359CE}')
+	coclass_clsid = IID('{AEED0C73-5BBD-48F1-B200-0FF1D9494886}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10771,8 +11749,13 @@ class _RGBColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10786,7 +11769,7 @@ class _RGBColor(DispatchBaseClass):
 class _RasterEffectOptions(DispatchBaseClass):
 	'The document raster effects settings'
 	CLSID = IID('{246086F4-6F43-4D2B-A0BA-3BFB0E484DDF}')
-	coclass_clsid = IID('{F4FCC1A9-2D0B-4555-B48D-ADE421F10F54}')
+	coclass_clsid = IID('{B7CB725A-A22F-437C-B26D-B9598192838D}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10818,8 +11801,13 @@ class _RasterEffectOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10833,7 +11821,7 @@ class _RasterEffectOptions(DispatchBaseClass):
 class _RasterizeOptions(DispatchBaseClass):
 	'Options which may be supplied when rasterizing the artwork'
 	CLSID = IID('{196F9F57-2023-4C2F-8662-9C20F9D6DE7A}')
-	coclass_clsid = IID('{FA4BF28E-9A94-4EE8-A050-74C8A54B107F}')
+	coclass_clsid = IID('{4EDAE507-552C-4A3D-81ED-853FBF459F6F}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10871,8 +11859,13 @@ class _RasterizeOptions(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10886,7 +11879,7 @@ class _RasterizeOptions(DispatchBaseClass):
 class _Screen(DispatchBaseClass):
 	'color separation screen'
 	CLSID = IID('{95CD2C0E-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{162B9894-C6F9-4E55-A6D9-BFD86B8BF4F5}')
+	coclass_clsid = IID('{426DE651-B597-4343-827B-249B5138E9D0}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10914,8 +11907,13 @@ class _Screen(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10929,7 +11927,7 @@ class _Screen(DispatchBaseClass):
 class _ScreenInfo(DispatchBaseClass):
 	'Screen information'
 	CLSID = IID('{95CD2C0F-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{FB23AEC3-074E-4CE4-8FC7-2391BBF14140}')
+	coclass_clsid = IID('{6469F64B-E2C1-4B30-8FEB-72ED0B1A288A}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10953,8 +11951,13 @@ class _ScreenInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -10968,7 +11971,7 @@ class _ScreenInfo(DispatchBaseClass):
 class _ScreenSpotFunction(DispatchBaseClass):
 	'color separation screen spot function'
 	CLSID = IID('{95CD2C14-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{0D7F382B-98D9-4834-AE8D-6A03017CB774}')
+	coclass_clsid = IID('{1813D00D-D9AA-4A18-B373-35762A57997A}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -10990,8 +11993,13 @@ class _ScreenSpotFunction(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -11005,7 +12013,7 @@ class _ScreenSpotFunction(DispatchBaseClass):
 class _SpotColor(DispatchBaseClass):
 	'Information about the spot color'
 	CLSID = IID('{95CD20B4-AD72-11D3-B086-0010A4F5C335}')
-	coclass_clsid = IID('{00BAC15D-DEEB-47CE-B207-C0C72BC7718C}')
+	coclass_clsid = IID('{2816A6BC-0DDE-4758-9EEA-9D56A080F102}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -11028,8 +12036,13 @@ class _SpotColor(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -11043,7 +12056,7 @@ class _SpotColor(DispatchBaseClass):
 class _TabStopInfo(DispatchBaseClass):
 	'Tab stop information (returned by tab stops from a paragraph object)'
 	CLSID = IID('{E380AAF5-61BF-44C2-B3D2-00D631CE879D}')
-	coclass_clsid = IID('{F26D5AB0-8B1D-4BF2-87A7-4EC6B74B03EF}')
+	coclass_clsid = IID('{D56C5BBA-4228-4C1B-BCF8-641D01198CB3}')
 
 	def SetObjectValue(self, arg0=defaultUnnamedArg):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
@@ -11069,8 +12082,13 @@ class _TabStopInfo(DispatchBaseClass):
 		return self._oleobj_.InvokeTypes(0, LCID, 8, (24, 0), ((9, 0),),arg0
 			)
 
+	def __unicode__(self, *args):
+		try:
+			return unicode(self.__call__(*args))
+		except pythoncom.com_error:
+			return repr(self)
 	def __str__(self, *args):
-		return str(self.__call__(*args))
+		return str(self.__unicode__(*args))
 	def __int__(self, *args):
 		return int(self.__call__(*args))
 	def __iter__(self):
@@ -11082,10 +12100,10 @@ class _TabStopInfo(DispatchBaseClass):
 		return win32com.client.util.Iterator(ob, None)
 
 from win32com.client import CoClassBaseClass
-# This CoClass is known by the name 'Illustrator.Application.CC.2017'
+# This CoClass is known by the name 'Illustrator.Application.24'
 class Application(CoClassBaseClass): # A CoClass
 	# The Adobe Illustrator application
-	CLSID = IID('{0FA36670-F0BC-48C0-AD25-6CF62CAD3A31}')
+	CLSID = IID('{74356B35-AF38-4EA4-A0B8-36A163E4BEE6}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11093,10 +12111,10 @@ class Application(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Application
 
-# This CoClass is known by the name 'Illustrator.CMYKColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.CMYKColor.24'
 class CMYKColor(CoClassBaseClass): # A CoClass
 	# A CMYK color specification
-	CLSID = IID('{9AFB43D8-2ABA-4DE9-A3E1-617AAA863C22}')
+	CLSID = IID('{FDFC31E3-E09F-4311-B021-297CBD9BD5E8}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11106,7 +12124,7 @@ class CMYKColor(CoClassBaseClass): # A CoClass
 
 class Dimensions(CoClassBaseClass): # A CoClass
 	# Dimensions (height and width)
-	CLSID = IID('{40A7C4A8-EFD2-43A8-806F-5B0CCE61DCE6}')
+	CLSID = IID('{84B2513B-142B-454D-B618-B0C9C55E90F5}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11114,10 +12132,10 @@ class Dimensions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Dimensions
 
-# This CoClass is known by the name 'Illustrator.DocumentPreset.CC.2017'
+# This CoClass is known by the name 'Illustrator.DocumentPreset.24'
 class DocumentPreset(CoClassBaseClass): # A CoClass
 	# the new document preset to use for creating a new document
-	CLSID = IID('{E2D4A432-9E16-41E6-BCA5-062890269CD1}')
+	CLSID = IID('{65A81A10-85AE-46B1-B2F6-E475B852139D}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11125,10 +12143,10 @@ class DocumentPreset(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _DocumentPreset
 
-# This CoClass is known by the name 'Illustrator.EPSSaveOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.EPSSaveOptions.24'
 class EPSSaveOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when saving a document as an Illustrator EPS file
-	CLSID = IID('{F07FD4A3-5651-47DA-AC33-91BC06403816}')
+	CLSID = IID('{99D7941A-05F9-419A-BA50-4C6148B54187}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11136,10 +12154,76 @@ class EPSSaveOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _EPSSaveOptions
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsAutoCAD.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportForScreensItemToExport.24'
+class ExportForScreensItemToExport(CoClassBaseClass): # A CoClass
+	# An item that needs to be exported; for example, a document, artboard, or asset
+	CLSID = IID('{38AE003B-0E4B-4EB8-8D21-DB5ECCBD5624}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensItemToExport,
+	]
+	default_interface = _ExportForScreensItemToExport
+
+# This CoClass is known by the name 'Illustrator.ExportForScreensOptionsJPEG.24'
+class ExportForScreensOptionsJPEG(CoClassBaseClass): # A CoClass
+	# Options which may be provided when exporting a document as a JPEG100 file
+	CLSID = IID('{4A99261F-223B-4980-B746-9960895D74BB}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensOptionsJPEG,
+	]
+	default_interface = _ExportForScreensOptionsJPEG
+
+# This CoClass is known by the name 'Illustrator.ExportForScreensOptionsPNG24.24'
+class ExportForScreensOptionsPNG24(CoClassBaseClass): # A CoClass
+	# Options which may be provided when exporting a document as an 24 bit PNG file
+	CLSID = IID('{D8773E95-0FBB-45E2-9755-C929F86CBFBD}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensOptionsPNG24,
+	]
+	default_interface = _ExportForScreensOptionsPNG24
+
+# This CoClass is known by the name 'Illustrator.ExportForScreensOptionsPNG8.24'
+class ExportForScreensOptionsPNG8(CoClassBaseClass): # A CoClass
+	# Options which may be provided when exporting a document as an 8 bit PNG file
+	CLSID = IID('{98C0ECCB-F1BC-4CEF-9A51-B9F06E40C52E}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensOptionsPNG8,
+	]
+	default_interface = _ExportForScreensOptionsPNG8
+
+# This CoClass is known by the name 'Illustrator.ExportForScreensOptionsWebOptimizedSVG.24'
+class ExportForScreensOptionsWebOptimizedSVG(CoClassBaseClass): # A CoClass
+	# Options which may be provided when exporting a document as a web optimized SVG file
+	CLSID = IID('{4F9C4A42-947D-40B0-BB12-266B735321BE}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensOptionsWebOptimizedSVG,
+	]
+	default_interface = _ExportForScreensOptionsWebOptimizedSVG
+
+# This CoClass is known by the name 'Illustrator.ExportForScreensPDFOptions.24'
+class ExportForScreensPDFOptions(CoClassBaseClass): # A CoClass
+	# Options which may be provided when exporting a document as a PDF file.
+	CLSID = IID('{C97944EF-40B3-4D40-A3E6-F8F11AC5A3D9}')
+	coclass_sources = [
+	]
+	coclass_interfaces = [
+		_ExportForScreensPDFOptions,
+	]
+	default_interface = _ExportForScreensPDFOptions
+
+# This CoClass is known by the name 'Illustrator.ExportOptionsAutoCAD.24'
 class ExportOptionsAutoCAD(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document to AutoCAD formats (.dwg or .dxf)
-	CLSID = IID('{D678C828-971A-4759-8A5D-3FF12C221A22}')
+	CLSID = IID('{4051FDD0-14A2-427F-980F-E75EC23C48F7}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11147,10 +12231,10 @@ class ExportOptionsAutoCAD(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsAutoCAD
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsFlash.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsFlash.24'
 class ExportOptionsFlash(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as an Flash (.SWF) file
-	CLSID = IID('{09534ADA-D2A2-45EB-BD90-8E4D391D306B}')
+	CLSID = IID('{824DDFF0-9068-4173-B684-D4C33E22B8AF}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11158,10 +12242,10 @@ class ExportOptionsFlash(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsFlash
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsGIF.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsGIF.24'
 class ExportOptionsGIF(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as a GIF file
-	CLSID = IID('{46E4F107-315D-4BDF-BE66-4E33D9596A9A}')
+	CLSID = IID('{53F599B3-4E43-445D-91C9-406AD78F4217}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11169,10 +12253,10 @@ class ExportOptionsGIF(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsGIF
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsJPEG.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsJPEG.24'
 class ExportOptionsJPEG(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as a JPEG file
-	CLSID = IID('{4C1581E0-3BA8-4CE6-83FC-34EF5F2A9F40}')
+	CLSID = IID('{EB89AAEA-981F-4B6F-B812-985F82987AE2}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11180,10 +12264,10 @@ class ExportOptionsJPEG(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsJPEG
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsPNG24.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsPNG24.24'
 class ExportOptionsPNG24(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as an 24 bit PNG file
-	CLSID = IID('{668E6292-D51A-4628-9800-4817A6762DF3}')
+	CLSID = IID('{4BA0BEFF-198A-464F-BACF-0BDF3EE23D81}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11191,10 +12275,10 @@ class ExportOptionsPNG24(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsPNG24
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsPNG8.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsPNG8.24'
 class ExportOptionsPNG8(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as an 8 bit PNG file
-	CLSID = IID('{ECF0C759-F01B-4B3B-8922-541C1C163DF3}')
+	CLSID = IID('{A094EBF0-42F9-4B81-B032-01A838AB9863}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11202,10 +12286,10 @@ class ExportOptionsPNG8(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsPNG8
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsPhotoshop.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsPhotoshop.24'
 class ExportOptionsPhotoshop(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as a Photoshop file
-	CLSID = IID('{1CC2A29F-5B2C-4359-9728-0D1771BDE2B1}')
+	CLSID = IID('{F895631C-DA84-442D-9437-66C5FCD04481}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11213,10 +12297,10 @@ class ExportOptionsPhotoshop(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsPhotoshop
 
-# This CoClass is known by the name 'Illustrator.ExportOptionsSVG.CC.2017'
+# This CoClass is known by the name 'Illustrator.ExportOptionsSVG.24'
 class ExportOptionsSVG(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as an SVG file
-	CLSID = IID('{8930E841-DD0D-47EB-ACB1-8A37AFDD5A2A}')
+	CLSID = IID('{72FA28E1-CDBE-4901-AE54-65ED3E5CABCF}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11224,9 +12308,10 @@ class ExportOptionsSVG(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsSVG
 
+# This CoClass is known by the name 'Illustrator.ExportOptionsTIFF.24'
 class ExportOptionsTIFF(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as a TIFF file
-	CLSID = IID('{A07D1206-AB5A-4BB1-9207-AEBA31A2D652}')
+	CLSID = IID('{93A24F08-D70A-42B1-8B1F-5A7FEC495C64}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11234,9 +12319,10 @@ class ExportOptionsTIFF(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsTIFF
 
+# This CoClass is known by the name 'Illustrator.ExportOptionsWebOptimizedSVG.24'
 class ExportOptionsWebOptimizedSVG(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when exporting a document as a Web optimized SVG file
-	CLSID = IID('{FCB10B56-8002-46AE-A70D-D02783FFA353}')
+	CLSID = IID('{C7D18CB4-B414-48DC-A59A-CD89C4476007}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11244,10 +12330,10 @@ class ExportOptionsWebOptimizedSVG(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ExportOptionsWebOptimizedSVG
 
-# This CoClass is known by the name 'Illustrator.FXGSaveOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.FXGSaveOptions.24'
 class FXGSaveOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when saving a document as an FXG file
-	CLSID = IID('{8DA7F9C4-7E22-46BD-BA1D-5517A9F0CD18}')
+	CLSID = IID('{41004195-FCD1-43C7-B910-6D7B6F9DE763}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11255,10 +12341,10 @@ class FXGSaveOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _FXGSaveOptions
 
-# This CoClass is known by the name 'Illustrator.GradientColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.GradientColor.24'
 class GradientColor(CoClassBaseClass): # A CoClass
 	# A Gradient color specification
-	CLSID = IID('{B2FE80F4-9612-48F9-87AD-B79A905BCBFC}')
+	CLSID = IID('{0A86B191-F1FE-48F5-8BED-E1121B2488F1}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11268,7 +12354,7 @@ class GradientColor(CoClassBaseClass): # A CoClass
 
 class GrayColor(CoClassBaseClass): # A CoClass
 	# A gray color specification
-	CLSID = IID('{2FEEBDFA-68E5-49AE-BE7B-1A97F09DF8F9}')
+	CLSID = IID('{FFE94CD1-913A-4C37-9610-DBEF313F7ED3}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11276,10 +12362,10 @@ class GrayColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _GrayColor
 
-# This CoClass is known by the name 'Illustrator.IllustratorSaveOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.IllustratorSaveOptions.24'
 class IllustratorSaveOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when saving a document as an Illustrator file
-	CLSID = IID('{5C9DB812-A552-4513-8C6B-3D21EFC42605}')
+	CLSID = IID('{898129FA-400E-404F-A15C-7CC2F436C66F}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11287,10 +12373,10 @@ class IllustratorSaveOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _IllustratorSaveOptions
 
-# This CoClass is known by the name 'Illustrator.ImageCaptureOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.ImageCaptureOptions.24'
 class ImageCaptureOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when capturing a portion of the artwork as an 24 bit PNG file
-	CLSID = IID('{BD1B34AB-D76C-4DA1-A134-086969C4EDEF}')
+	CLSID = IID('{34519756-85AB-4EF6-9C9F-EFDB41AA858A}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11298,10 +12384,10 @@ class ImageCaptureOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ImageCaptureOptions
 
-# This CoClass is known by the name 'Illustrator.Ink.CC.2017'
+# This CoClass is known by the name 'Illustrator.Ink.24'
 class Ink(CoClassBaseClass): # A CoClass
 	# printer's ink
-	CLSID = IID('{E417157D-29E4-408A-B742-0F908DF8C745}')
+	CLSID = IID('{C93373AB-D66E-47CD-81D1-CC324136B8B2}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11309,10 +12395,10 @@ class Ink(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Ink
 
-# This CoClass is known by the name 'Illustrator.InkInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.InkInfo.24'
 class InkInfo(CoClassBaseClass): # A CoClass
 	# Ink information
-	CLSID = IID('{F4A69A15-7701-4DF4-948D-9E7FBACC0787}')
+	CLSID = IID('{7BF03EDE-608F-4FD2-8516-CFE5C7FF7CE2}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11320,10 +12406,10 @@ class InkInfo(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _InkInfo
 
-# This CoClass is known by the name 'Illustrator.LabColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.LabColor.24'
 class LabColor(CoClassBaseClass): # A CoClass
 	# An Lab color specification
-	CLSID = IID('{EF57A9D6-A4A8-4136-94C8-8C707F392A92}')
+	CLSID = IID('{6BB14B4A-09A7-4C41-B2B6-CC2BFD483757}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11331,9 +12417,9 @@ class LabColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _LabColor
 
-# This CoClass is known by the name 'Illustrator.Matrix.CC.2017'
+# This CoClass is known by the name 'Illustrator.Matrix.24'
 class Matrix(CoClassBaseClass): # A CoClass
-	CLSID = IID('{E580BAB8-2188-4312-A007-7449839ACF29}')
+	CLSID = IID('{31771CF4-D747-4D9E-B757-9371D8FC91B3}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11341,10 +12427,10 @@ class Matrix(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Matrix
 
-# This CoClass is known by the name 'Illustrator.NoColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.NoColor.24'
 class NoColor(CoClassBaseClass): # A CoClass
 	# represents the 'none' color
-	CLSID = IID('{013C465C-6000-40C3-B7A6-B236B53A672D}')
+	CLSID = IID('{CD2F83CF-7078-42DE-AD8C-AF51EB242093}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11352,10 +12438,10 @@ class NoColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _NoColor
 
-# This CoClass is known by the name 'Illustrator.OpenOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.OpenOptions.24'
 class OpenOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when opening a file
-	CLSID = IID('{F95B83D1-94FC-4AF6-99B0-9094BE3AB899}')
+	CLSID = IID('{771DABCC-A731-4DC9-B795-41DE59C7F846}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11363,10 +12449,10 @@ class OpenOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _OpenOptions
 
-# This CoClass is known by the name 'Illustrator.PDFSaveOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PDFSaveOptions.24'
 class PDFSaveOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when saving a document as a PDF file
-	CLSID = IID('{695B5492-AC6A-479A-A2B1-E8AE9DDE5B40}')
+	CLSID = IID('{241C78A5-28F3-486D-B7A6-112FB2E15067}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11374,10 +12460,10 @@ class PDFSaveOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PDFSaveOptions
 
-# This CoClass is known by the name 'Illustrator.PPDFile.CC.2017'
+# This CoClass is known by the name 'Illustrator.PPDFile.24'
 class PPDFile(CoClassBaseClass): # A CoClass
 	# a PPD file
-	CLSID = IID('{D2DBC561-0DCE-4141-8FE8-2ECA346CED3E}')
+	CLSID = IID('{83F58F01-46AC-41AD-A1A9-51161C3DDC2C}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11385,10 +12471,10 @@ class PPDFile(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PPDFile
 
-# This CoClass is known by the name 'Illustrator.PPDFileInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.PPDFileInfo.24'
 class PPDFileInfo(CoClassBaseClass): # A CoClass
 	# PPD file information
-	CLSID = IID('{EBE15492-1925-4BA2-A987-8F77CB15FCF0}')
+	CLSID = IID('{A14F6060-2F9B-464B-BFA6-2AC21E87DADE}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11396,10 +12482,10 @@ class PPDFileInfo(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PPDFileInfo
 
-# This CoClass is known by the name 'Illustrator.Paper.CC.2017'
+# This CoClass is known by the name 'Illustrator.Paper.24'
 class Paper(CoClassBaseClass): # A CoClass
 	# paper size
-	CLSID = IID('{99044697-4AD8-4B63-A3D8-BBFE4610C844}')
+	CLSID = IID('{584DE2CF-5851-4706-AE18-BEC16020480E}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11407,10 +12493,10 @@ class Paper(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Paper
 
-# This CoClass is known by the name 'Illustrator.PaperInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.PaperInfo.24'
 class PaperInfo(CoClassBaseClass): # A CoClass
 	# Paper information
-	CLSID = IID('{2D6EDDEF-62F9-4D38-A0B5-68B576721018}')
+	CLSID = IID('{04A88E02-89A1-44A3-931B-8DAD9631BF8D}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11418,10 +12504,10 @@ class PaperInfo(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PaperInfo
 
-# This CoClass is known by the name 'Illustrator.PatternColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.PatternColor.24'
 class PatternColor(CoClassBaseClass): # A CoClass
 	# A Pattern color specification
-	CLSID = IID('{F493FD6F-9E65-4AE4-AED9-AFDA9CF7F3ED}')
+	CLSID = IID('{35222D0F-C3CE-46C5-8D04-56E0A5525C65}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11429,10 +12515,10 @@ class PatternColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PatternColor
 
-# This CoClass is known by the name 'Illustrator.PrintColorManagementOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintColorManagementOptions.24'
 class PrintColorManagementOptions(CoClassBaseClass): # A CoClass
 	# the color management options
-	CLSID = IID('{EBAD60C2-68F6-4D26-A3A2-0AFD276418AC}')
+	CLSID = IID('{5FA89FBE-6A40-44D2-A25E-CB146FB03CDA}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11440,10 +12526,10 @@ class PrintColorManagementOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintColorManagementOptions
 
-# This CoClass is known by the name 'Illustrator.PrintColorSeparationOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintColorSeparationOptions.24'
 class PrintColorSeparationOptions(CoClassBaseClass): # A CoClass
 	# Print color separation options
-	CLSID = IID('{C43D57E6-B94A-4DAD-BEA4-153159D34529}')
+	CLSID = IID('{BF857496-8FFC-44A5-9ABE-762593E1E7C1}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11453,7 +12539,7 @@ class PrintColorSeparationOptions(CoClassBaseClass): # A CoClass
 
 class PrintCoordinateOptions(CoClassBaseClass): # A CoClass
 	# the print coordinate options
-	CLSID = IID('{42A65455-5260-4F3D-A4FE-33B2C5BF839C}')
+	CLSID = IID('{4BB0A74F-1AD4-420B-BC0C-CC798B127AA2}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11461,10 +12547,10 @@ class PrintCoordinateOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintCoordinateOptions
 
-# This CoClass is known by the name 'Illustrator.PrintFlattenerOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintFlattenerOptions.24'
 class PrintFlattenerOptions(CoClassBaseClass): # A CoClass
 	# the transparency flattening options
-	CLSID = IID('{C3BF40DE-EDA0-493B-924A-42FD00D36CEB}')
+	CLSID = IID('{F2FBB042-6B60-48A4-BEB9-C77DB29AA910}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11472,10 +12558,10 @@ class PrintFlattenerOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintFlattenerOptions
 
-# This CoClass is known by the name 'Illustrator.PrintFontOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintFontOptions.24'
 class PrintFontOptions(CoClassBaseClass): # A CoClass
 	# the font options for printing
-	CLSID = IID('{FDB1EDFA-8339-4630-A515-6ACFD4102EDD}')
+	CLSID = IID('{C301D89D-C651-447D-94CB-6F605FB00358}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11483,10 +12569,10 @@ class PrintFontOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintFontOptions
 
-# This CoClass is known by the name 'Illustrator.PrintJobOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintJobOptions.24'
 class PrintJobOptions(CoClassBaseClass): # A CoClass
 	# the print job options
-	CLSID = IID('{A816141F-0C6E-4F89-846A-0F596AEDAF9F}')
+	CLSID = IID('{6B80700C-766A-4EA1-9CE2-3CC24203E423}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11494,10 +12580,10 @@ class PrintJobOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintJobOptions
 
-# This CoClass is known by the name 'Illustrator.PrintOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintOptions.24'
 class PrintOptions(CoClassBaseClass): # A CoClass
 	# the print options
-	CLSID = IID('{76543789-87FE-43E4-B70C-17089F44F447}')
+	CLSID = IID('{3A1386C2-0D30-4F08-922D-BB021D267140}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11505,10 +12591,10 @@ class PrintOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintOptions
 
-# This CoClass is known by the name 'Illustrator.PrintPageMarksOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintPageMarksOptions.24'
 class PrintPageMarksOptions(CoClassBaseClass): # A CoClass
 	# the page marks options
-	CLSID = IID('{D41CD84C-C090-4B8F-A7CD-44CCF26C254E}')
+	CLSID = IID('{3BB60A12-8FE2-44FD-A449-5366A3F9A792}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11516,10 +12602,10 @@ class PrintPageMarksOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintPageMarksOptions
 
-# This CoClass is known by the name 'Illustrator.PrintPaperOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintPaperOptions.24'
 class PrintPaperOptions(CoClassBaseClass): # A CoClass
 	# the paper options
-	CLSID = IID('{297CFCE2-7884-400D-AEB1-BAB1BB3CC897}')
+	CLSID = IID('{1D188FA2-9537-42F3-8297-BD6294BA1686}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11527,10 +12613,10 @@ class PrintPaperOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintPaperOptions
 
-# This CoClass is known by the name 'Illustrator.PrintPostScriptOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrintPostScriptOptions.24'
 class PrintPostScriptOptions(CoClassBaseClass): # A CoClass
 	# the PostScript options
-	CLSID = IID('{F58B5314-DC1D-4283-90C4-2248F6E60C6C}')
+	CLSID = IID('{FEB59B75-1A61-4854-91B2-89EF24594CCB}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11538,10 +12624,10 @@ class PrintPostScriptOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrintPostScriptOptions
 
-# This CoClass is known by the name 'Illustrator.Printer.CC.2017'
+# This CoClass is known by the name 'Illustrator.Printer.24'
 class Printer(CoClassBaseClass): # A CoClass
 	# an installed printer
-	CLSID = IID('{081252CB-D855-48B9-9D85-FA9A9981DF81}')
+	CLSID = IID('{11BD3EFB-312F-435E-8297-525E317612BC}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11549,10 +12635,10 @@ class Printer(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Printer
 
-# This CoClass is known by the name 'Illustrator.PrinterInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.PrinterInfo.24'
 class PrinterInfo(CoClassBaseClass): # A CoClass
 	# printer information
-	CLSID = IID('{29FEE1EA-CD21-41A6-9340-6219E3E57BB7}')
+	CLSID = IID('{50639364-F8DF-4744-BBC9-C7B8C6751AA2}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11560,10 +12646,10 @@ class PrinterInfo(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _PrinterInfo
 
-# This CoClass is known by the name 'Illustrator.RGBColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.RGBColor.24'
 class RGBColor(CoClassBaseClass): # A CoClass
 	# An RGB color specification
-	CLSID = IID('{6707D262-70F2-423D-88E1-ADCE85B359CE}')
+	CLSID = IID('{AEED0C73-5BBD-48F1-B200-0FF1D9494886}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11571,10 +12657,10 @@ class RGBColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _RGBColor
 
-# This CoClass is known by the name 'Illustrator.RasterEffectOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.RasterEffectOptions.24'
 class RasterEffectOptions(CoClassBaseClass): # A CoClass
 	# The document raster effects settings
-	CLSID = IID('{F4FCC1A9-2D0B-4555-B48D-ADE421F10F54}')
+	CLSID = IID('{B7CB725A-A22F-437C-B26D-B9598192838D}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11582,10 +12668,10 @@ class RasterEffectOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _RasterEffectOptions
 
-# This CoClass is known by the name 'Illustrator.RasterizeOptions.CC.2017'
+# This CoClass is known by the name 'Illustrator.RasterizeOptions.24'
 class RasterizeOptions(CoClassBaseClass): # A CoClass
 	# Options which may be supplied when rasterizing the artwork
-	CLSID = IID('{FA4BF28E-9A94-4EE8-A050-74C8A54B107F}')
+	CLSID = IID('{4EDAE507-552C-4A3D-81ED-853FBF459F6F}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11593,10 +12679,10 @@ class RasterizeOptions(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _RasterizeOptions
 
-# This CoClass is known by the name 'Illustrator.Screen.CC.2017'
+# This CoClass is known by the name 'Illustrator.Screen.24'
 class Screen(CoClassBaseClass): # A CoClass
 	# color separation screen
-	CLSID = IID('{162B9894-C6F9-4E55-A6D9-BFD86B8BF4F5}')
+	CLSID = IID('{426DE651-B597-4343-827B-249B5138E9D0}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11604,10 +12690,10 @@ class Screen(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _Screen
 
-# This CoClass is known by the name 'Illustrator.ScreenInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.ScreenInfo.24'
 class ScreenInfo(CoClassBaseClass): # A CoClass
 	# Screen information
-	CLSID = IID('{FB23AEC3-074E-4CE4-8FC7-2391BBF14140}')
+	CLSID = IID('{6469F64B-E2C1-4B30-8FEB-72ED0B1A288A}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11615,10 +12701,10 @@ class ScreenInfo(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ScreenInfo
 
-# This CoClass is known by the name 'Illustrator.ScreenSpotFunction.CC.2017'
+# This CoClass is known by the name 'Illustrator.ScreenSpotFunction.24'
 class ScreenSpotFunction(CoClassBaseClass): # A CoClass
 	# color separation screen spot function
-	CLSID = IID('{0D7F382B-98D9-4834-AE8D-6A03017CB774}')
+	CLSID = IID('{1813D00D-D9AA-4A18-B373-35762A57997A}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11626,10 +12712,10 @@ class ScreenSpotFunction(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _ScreenSpotFunction
 
-# This CoClass is known by the name 'Illustrator.SpotColor.CC.2017'
+# This CoClass is known by the name 'Illustrator.SpotColor.24'
 class SpotColor(CoClassBaseClass): # A CoClass
 	# Information about the spot color
-	CLSID = IID('{00BAC15D-DEEB-47CE-B207-C0C72BC7718C}')
+	CLSID = IID('{2816A6BC-0DDE-4758-9EEA-9D56A080F102}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11637,10 +12723,10 @@ class SpotColor(CoClassBaseClass): # A CoClass
 	]
 	default_interface = _SpotColor
 
-# This CoClass is known by the name 'Illustrator.TabStopInfo.CC.2017'
+# This CoClass is known by the name 'Illustrator.TabStopInfo.24'
 class TabStopInfo(CoClassBaseClass): # A CoClass
 	# Tab stop information (returned by tab stops from a paragraph object)
-	CLSID = IID('{F26D5AB0-8B1D-4BF2-87A7-4EC6B74B03EF}')
+	CLSID = IID('{D56C5BBA-4228-4C1B-BCF8-641D01198CB3}')
 	coclass_sources = [
 	]
 	coclass_interfaces = [
@@ -11652,196 +12738,210 @@ RecordMap = {
 }
 
 CLSIDToClassMap = {
+	'{97DDAA0B-4235-4E6F-B13C-FE850F759964}' : _ExportForScreensOptionsJPEG,
+	'{241C78A5-28F3-486D-B7A6-112FB2E15067}' : PDFSaveOptions,
+	'{AD865867-DED8-42D6-9BD8-D77533905975}' : AutoCADFileOptions,
+	'{95CD20E7-AD72-11D3-B086-0010A4F5C335}' : Patterns,
+	'{FFE94CD1-913A-4C37-9610-DBEF313F7ED3}' : GrayColor,
+	'{F2FBB042-6B60-48A4-BEB9-C77DB29AA910}' : PrintFlattenerOptions,
+	'{A07B43A9-0201-4369-A1B5-8A33C8A0BB23}' : _ExportOptionsPhotoshop,
+	'{20899C08-06F0-4803-BD2A-4059F9764852}' : InsertionPoints,
+	'{255CD590-0FBF-4345-94F5-871C4021D6BF}' : CharacterStyles,
+	'{4028B58C-1543-4B0B-A73B-4783B12BD760}' : _ExportForScreensItemToExport,
+	'{BF857496-8FFC-44A5-9ABE-762593E1E7C1}' : PrintColorSeparationOptions,
+	'{8507C961-DE07-440E-A2D8-6D48247ABF79}' : Story,
+	'{F895631C-DA84-442D-9437-66C5FCD04481}' : ExportOptionsPhotoshop,
+	'{C97944EF-40B3-4D40-A3E6-F8F11AC5A3D9}' : ExportForScreensPDFOptions,
+	'{EB89AAEA-981F-4B6F-B812-985F82987AE2}' : ExportOptionsJPEG,
+	'{95CD20F0-AD72-11D3-B086-0010A4F5C335}' : Views,
+	'{AD25A97A-80BC-4D6A-9E61-7E288DE977CA}' : _ExportOptionsAutoCAD,
+	'{500C9AF9-AA54-4941-B544-132E4D285938}' : _FXGSaveOptions,
+	'{6B80700C-766A-4EA1-9CE2-3CC24203E423}' : PrintJobOptions,
+	'{35222D0F-C3CE-46C5-8D04-56E0A5525C65}' : PatternColor,
+	'{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}' : _DocumentPreset,
+	'{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}' : NonNativeItem,
+	'{426DE651-B597-4343-827B-249B5138E9D0}' : Screen,
+	'{95CD20B2-AD72-11D3-B086-0010A4F5C335}' : _CMYKColor,
+	'{83F58F01-46AC-41AD-A1A9-51161C3DDC2C}' : PPDFile,
+	'{95CD20A7-AD72-11D3-B086-0010A4F5C335}' : _EPSSaveOptions,
+	'{95CD20A8-AD72-11D3-B086-0010A4F5C335}' : _PDFSaveOptions,
+	'{95CD20A9-AD72-11D3-B086-0010A4F5C335}' : _IllustratorSaveOptions,
 	'{95CD20AA-AD72-11D3-B086-0010A4F5C335}' : _Application,
 	'{95CD20AB-AD72-11D3-B086-0010A4F5C335}' : Document,
 	'{95CD20AC-AD72-11D3-B086-0010A4F5C335}' : Layer,
+	'{95CD20AD-AD72-11D3-B086-0010A4F5C335}' : View,
+	'{95CD20AE-AD72-11D3-B086-0010A4F5C335}' : Gradient,
+	'{95CD20AF-AD72-11D3-B086-0010A4F5C335}' : GradientStop,
 	'{95CD20B1-AD72-11D3-B086-0010A4F5C335}' : _RGBColor,
-	'{95CD20E3-AD72-11D3-B086-0010A4F5C335}' : CompoundPathItems,
+	'{4C78DF9F-7A09-11D4-81A0-00C04F60ECCE}' : _ExportOptionsWebOptimizedSVG,
+	'{1BD449AE-95C1-496B-9BDD-32AEB30CA819}' : _ExportForScreensOptionsWebOptimizedSVG,
+	'{95CD20B1-AD72-11D3-B086-0010A7F5C335}' : _Dimensions,
+	'{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}' : Variable,
+	'{95CD20B6-AD72-11D3-B086-0010A4F5C335}' : _PatternColor,
+	'{95CD20B7-AD72-11D3-B086-0010A4F5C335}' : _GradientColor,
+	'{95CD20B8-AD72-11D3-B086-0010A4F5C335}' : Swatch,
+	'{95CD20B9-AD72-11D3-B086-0010A4F5C335}' : Pattern,
+	'{95CD20BA-AD72-11D3-B086-0010A4F5C335}' : Brush,
+	'{95CD20BB-AD72-11D3-B086-0010A4F5C335}' : GraphicStyle,
+	'{95CD20BC-AD72-11D3-B086-0010A4F5C335}' : TextFont,
 	'{95CD20BE-AD72-11D3-B086-0010A4F5C335}' : CompoundPathItem,
-	'{95CD20E1-AD72-11D3-B086-0010A4F5C335}' : PathItems,
-	'{95CD20C0-AD72-11D3-B086-0010A4F5C335}' : PathItem,
-	'{95CD20E2-AD72-11D3-B086-0010A4F5C335}' : PathPoints,
-	'{95CD20C1-AD72-11D3-B086-0010A4F5C335}' : PathPoint,
-	'{95CD20EB-AD72-11D3-B086-0010A4F5C335}' : Tags,
 	'{95CD20BF-AD72-11D3-B086-0010A4F5C335}' : Tag,
-	'{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}' : GraphItem,
-	'{95CD20C6-AD72-11D3-B086-0010A4F5C335}' : GroupItem,
-	'{95CD20DF-AD72-11D3-B086-0010A4F5C335}' : GroupItems,
-	'{95CD20E0-AD72-11D3-B086-0010A4F5C335}' : PageItems,
-	'{95CD20EC-AD72-11D3-B086-0010A4F5C335}' : RasterItems,
+	'{95CD20C0-AD72-11D3-B086-0010A4F5C335}' : PathItem,
+	'{95CD20C1-AD72-11D3-B086-0010A4F5C335}' : PathPoint,
 	'{95CD20C2-AD72-11D3-B086-0010A4F5C335}' : RasterItem,
-	'{95CD20C9-AD72-11D3-B086-0010A4F5C335}' : _Matrix,
-	'{95CD20C4-AD72-11D3-B086-0010A4F5C335}' : MeshItem,
 	'{95CD20C3-AD72-11D3-B086-0010A4F5C335}' : PlacedItem,
+	'{95CD20C4-AD72-11D3-B086-0010A4F5C335}' : MeshItem,
 	'{95CD20C5-AD72-11D3-B086-0010A4F5C335}' : PluginItem,
-	'{4C78DFC0-7A09-11D4-81A0-00C04F60ECCE}' : TracingObject,
+	'{95CD20C6-AD72-11D3-B086-0010A4F5C335}' : GroupItem,
+	'{4C78DFB4-7A09-11D4-81A0-00C04F60ECCC}' : GraphItems,
+	'{95CD20C8-AD72-11D3-B086-0010A4F5C335}' : TextPath,
+	'{95CD20C9-AD72-11D3-B086-0010A4F5C335}' : _Matrix,
+	'{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}' : GraphItem,
+	'{95CD20CB-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsPNG8,
+	'{95CD20CC-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsPNG24,
+	'{4C78DFBA-7A09-11D4-81A0-00C04F60ECCC}' : PhotoshopFileOptions,
+	'{1813D00D-D9AA-4A18-B373-35762A57997A}' : ScreenSpotFunction,
+	'{95CD20CF-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsSVG,
+	'{95CD20D0-AD72-11D3-B086-0010A4F5C335}' : TextRange,
 	'{4C78DFC0-7A09-11D4-81A0-00C04F60ECCD}' : TracingOptions,
+	'{4A99261F-223B-4980-B746-9960895D74BB}' : ExportForScreensOptionsJPEG,
+	'{95CD20D5-AD72-11D3-B086-0010A4F5C335}' : Characters,
 	'{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}' : SymbolItem,
-	'{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}' : Symbol,
+	'{95CD20D7-AD72-11D3-B086-0010A4F5C335}' : Lines,
+	'{95CD20D8-AD72-11D3-B086-0010A4F5C335}' : Paragraphs,
+	'{4C78DFC6-7A09-11D4-81A0-00C04F60ECCC}' : SymbolItems,
+	'{95CD20DA-AD72-11D3-B086-0010A4F5C335}' : Swatches,
+	'{95CD20DB-AD72-11D3-B086-0010A4F5C335}' : Documents,
+	'{95CD20DC-AD72-11D3-B086-0010A4F5C335}' : Layers,
+	'{95CD20DD-AD72-11D3-B086-0010A4F5C335}' : Gradients,
+	'{95CD20DE-AD72-11D3-B086-0010A4F5C335}' : GradientStops,
+	'{95CD20DF-AD72-11D3-B086-0010A4F5C335}' : GroupItems,
+	'{4C78DFCD-7A09-11D4-81A0-00C04F60ECCC}' : CharacterAttributes,
+	'{95CD20E1-AD72-11D3-B086-0010A4F5C335}' : PathItems,
+	'{95CD20E2-AD72-11D3-B086-0010A4F5C335}' : PathPoints,
+	'{95CD20E3-AD72-11D3-B086-0010A4F5C335}' : CompoundPathItems,
+	'{20899C07-06F0-4803-BD2A-4059F9764852}' : TextRanges,
+	'{95CD20E8-AD72-11D3-B086-0010A4F5C335}' : Brushes,
+	'{95CD20E9-AD72-11D3-B086-0010A4F5C335}' : GraphicStyles,
+	'{95CD20EA-AD72-11D3-B086-0010A4F5C335}' : TextFonts,
+	'{95CD20EB-AD72-11D3-B086-0010A4F5C335}' : Tags,
+	'{95CD20EC-AD72-11D3-B086-0010A4F5C335}' : RasterItems,
 	'{95CD20ED-AD72-11D3-B086-0010A4F5C335}' : PlacedItems,
 	'{95CD20EE-AD72-11D3-B086-0010A4F5C335}' : MeshItems,
 	'{95CD20EF-AD72-11D3-B086-0010A4F5C335}' : PluginItems,
-	'{4C78DFB4-7A09-11D4-81A0-00C04F60ECCC}' : GraphItems,
-	'{9157F2B0-D436-4AC6-9769-94DC89E6EC92}' : NonNativeItems,
-	'{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}' : NonNativeItem,
-	'{3CC63F1C-EA9C-4636-A16C-63808C42691E}' : TextFrames,
-	'{F0692236-A49A-474D-9745-715426856760}' : TextFrame,
-	'{8507C961-DE07-440E-A2D8-6D48247ABF79}' : Story,
-	'{95CD20D0-AD72-11D3-B086-0010A4F5C335}' : TextRange,
-	'{95CD20D5-AD72-11D3-B086-0010A4F5C335}' : Characters,
-	'{95CD20D6-AD72-11D3-B086-0010A4F5C335}' : Words,
-	'{95CD20D7-AD72-11D3-B086-0010A4F5C335}' : Lines,
-	'{95CD20D8-AD72-11D3-B086-0010A4F5C335}' : Paragraphs,
-	'{20899C07-06F0-4803-BD2A-4059F9764852}' : TextRanges,
-	'{20899C08-06F0-4803-BD2A-4059F9764852}' : InsertionPoints,
-	'{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}' : InsertionPoint,
-	'{255CD590-0FBF-4345-94F5-871C4021D6BF}' : CharacterStyles,
-	'{7C1FA60D-BF8F-4C43-B14C-77D842034966}' : CharacterStyle,
-	'{4C78DFCD-7A09-11D4-81A0-00C04F60ECCC}' : CharacterAttributes,
-	'{95CD20BC-AD72-11D3-B086-0010A4F5C335}' : TextFont,
-	'{0E3BF58B-A0F2-4776-9CD0-279FCB26009E}' : ParagraphStyles,
 	'{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}' : ParagraphStyle,
-	'{4C78DFCE-7A09-11D4-81A0-00C04F60ECCC}' : ParagraphAttributes,
-	'{95CD20C8-AD72-11D3-B086-0010A4F5C335}' : TextPath,
-	'{4C78DFC6-7A09-11D4-81A0-00C04F60ECCC}' : SymbolItems,
-	'{4C78DFE9-7A09-11D4-81A0-00C04F60ECCC}' : LegacyTextItems,
-	'{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}' : LegacyTextItem,
-	'{95CD20DC-AD72-11D3-B086-0010A4F5C335}' : Layers,
-	'{95CD20AD-AD72-11D3-B086-0010A4F5C335}' : View,
-	'{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}' : DataSet,
-	'{246086F4-6F43-4D2B-A0BA-3BFB0E484DDF}' : _RasterEffectOptions,
-	'{091ADAF8-D422-11DB-8314-0800200C9A66}' : Artboards,
-	'{30557E1D-A243-499D-84B8-6E170B36A1BD}' : Artboard,
-	'{95CD20F0-AD72-11D3-B086-0010A4F5C335}' : Views,
-	'{FF327E57-2EDA-4934-B3FD-CF470C62989D}' : EmbeddedItems,
-	'{96C13549-5237-4492-8345-2DB9FB6512BE}' : EmbedItem,
-	'{0E9E7B8C-BF29-4A10-9B1C-9F292FDAB07A}' : Stories,
-	'{95CD20DA-AD72-11D3-B086-0010A4F5C335}' : Swatches,
-	'{95CD20B8-AD72-11D3-B086-0010A4F5C335}' : Swatch,
-	'{558EF46F-A352-4A0D-9B1C-A2F6118FE611}' : SwatchGroups,
-	'{75482E9D-B225-419A-8187-EE9EB424138E}' : SwatchGroup,
-	'{95CD20B5-AD72-11D3-B086-0010A4F5C335}' : Spot,
-	'{95CD20DD-AD72-11D3-B086-0010A4F5C335}' : Gradients,
-	'{95CD20AE-AD72-11D3-B086-0010A4F5C335}' : Gradient,
-	'{95CD20DE-AD72-11D3-B086-0010A4F5C335}' : GradientStops,
-	'{95CD20AF-AD72-11D3-B086-0010A4F5C335}' : GradientStop,
-	'{95CD20E7-AD72-11D3-B086-0010A4F5C335}' : Patterns,
-	'{95CD20B9-AD72-11D3-B086-0010A4F5C335}' : Pattern,
-	'{95CD20D9-AD72-11D3-B086-0010A4F5C335}' : Spots,
-	'{4C78DFC9-7A09-11D4-81A0-00C04F60ECCC}' : Symbols,
-	'{95CD20E8-AD72-11D3-B086-0010A4F5C335}' : Brushes,
-	'{95CD20BA-AD72-11D3-B086-0010A4F5C335}' : Brush,
-	'{95CD20E9-AD72-11D3-B086-0010A4F5C335}' : GraphicStyles,
-	'{95CD20BB-AD72-11D3-B086-0010A4F5C335}' : GraphicStyle,
-	'{4C78DFA8-7A09-11D4-81A0-00C04F60ECCC}' : Variables,
-	'{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}' : Variable,
-	'{4C78DFAB-7A09-11D4-81A0-00C04F60ECCC}' : DataSets,
-	'{4C78DFCC-7A09-11D4-81A0-00C04F60ECCC}' : Preferences,
-	'{4C78DFBA-7A09-11D4-81A0-00C04F60ECCC}' : PhotoshopFileOptions,
-	'{4C78DFBD-7A09-11D4-81A0-00C04F60ECCC}' : PDFFileOptions,
-	'{AD865867-DED8-42D6-9BD8-D77533905975}' : AutoCADFileOptions,
-	'{95CD20DB-AD72-11D3-B086-0010A4F5C335}' : Documents,
-	'{95CD20EA-AD72-11D3-B086-0010A4F5C335}' : TextFonts,
-	'{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}' : _DocumentPreset,
-	'{95CD2C09-AD72-11D3-B086-0010A4F5C335}' : _PPDFileInfo,
-	'{60E764BB-CBEE-421F-B706-D228072EBB89}' : _OpenOptions,
-	'{500C9AF9-AA54-4941-B544-132E4D285938}' : _FXGSaveOptions,
-	'{95CD20A7-AD72-11D3-B086-0010A4F5C335}' : _EPSSaveOptions,
-	'{95CD20A8-AD72-11D3-B086-0010A4F5C335}' : _PDFSaveOptions,
-	'{95CD2C12-AD72-11D3-B086-0010A4F5C335}' : _PrintFlattenerOptions,
-	'{95CD20A9-AD72-11D3-B086-0010A4F5C335}' : _IllustratorSaveOptions,
-	'{95CD20CA-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsJPEG,
-	'{95CD20CB-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsPNG8,
-	'{95CD20CC-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsPNG24,
-	'{95CD20B1-AD72-11D3-B086-0010A7F5C335}' : _Dimensions,
-	'{95CD20CD-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsGIF,
-	'{A07B43A9-0201-4369-A1B5-8A33C8A0BB23}' : _ExportOptionsPhotoshop,
-	'{95CD20CF-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsSVG,
-	'{4C78DF9F-7A09-11D4-81A0-00C04F60ECCE}' : _ExportOptionsWebOptimizedSVG,
-	'{4C78DF9F-7A09-11D4-81A0-00C04F60ECCC}' : _ExportOptionsFlash,
-	'{AD25A97A-80BC-4D6A-9E61-7E288DE977CA}' : _ExportOptionsAutoCAD,
-	'{2A8F3C5F-B4E3-45BB-89CB-93F062B4F9F1}' : _ExportOptionsTIFF,
-	'{57EDB0EB-8F86-4898-AA88-5D6F47DEE239}' : _LabColor,
-	'{95CD20B2-AD72-11D3-B086-0010A4F5C335}' : _CMYKColor,
-	'{95CD20B3-AD72-11D3-B086-0010A4F5C335}' : _GrayColor,
+	'{AEED0C73-5BBD-48F1-B200-0FF1D9494886}' : RGBColor,
+	'{B7CB725A-A22F-437C-B26D-B9598192838D}' : RasterEffectOptions,
 	'{4C78DFE6-7A09-11D4-81A0-00C04F60ECCC}' : _NoColor,
+	'{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}' : InsertionPoint,
+	'{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}' : LegacyTextItem,
+	'{4C78DFE9-7A09-11D4-81A0-00C04F60ECCC}' : LegacyTextItems,
+	'{4C78DFEB-7A09-11D4-81A0-00C04F60ECCC}' : _ImageCaptureOptions,
+	'{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}' : Symbol,
+	'{04A88E02-89A1-44A3-931B-8DAD9631BF8D}' : PaperInfo,
+	'{31771CF4-D747-4D9E-B757-9371D8FC91B3}' : Matrix,
+	'{4051FDD0-14A2-427F-980F-E75EC23C48F7}' : ExportOptionsAutoCAD,
+	'{95CD2C07-AD72-11D3-B086-0010A4F5C335}' : _PrintColorManagementOptions,
+	'{4C78DF9F-7A09-11D4-81A0-00C04F60ECCC}' : _ExportOptionsFlash,
+	'{95CD20B3-AD72-11D3-B086-0010A4F5C335}' : _GrayColor,
 	'{95CD20B4-AD72-11D3-B086-0010A4F5C335}' : _SpotColor,
-	'{95CD20B6-AD72-11D3-B086-0010A4F5C335}' : _PatternColor,
-	'{95CD20B7-AD72-11D3-B086-0010A4F5C335}' : _GradientColor,
+	'{34519756-85AB-4EF6-9C9F-EFDB41AA858A}' : ImageCaptureOptions,
+	'{D8773E95-0FBB-45E2-9755-C929F86CBFBD}' : ExportForScreensOptionsPNG24,
+	'{84B2513B-142B-454D-B618-B0C9C55E90F5}' : Dimensions,
+	'{95CD20B5-AD72-11D3-B086-0010A4F5C335}' : Spot,
+	'{3CC63F1C-EA9C-4636-A16C-63808C42691E}' : TextFrames,
+	'{A094EBF0-42F9-4B81-B032-01A838AB9863}' : ExportOptionsPNG8,
+	'{4EDAE507-552C-4A3D-81ED-853FBF459F6F}' : RasterizeOptions,
+	'{4F9C4A42-947D-40B0-BB12-266B735321BE}' : ExportForScreensOptionsWebOptimizedSVG,
+	'{30557E1D-A243-499D-84B8-6E170B36A1BD}' : Artboard,
+	'{FF327E57-2EDA-4934-B3FD-CF470C62989D}' : EmbeddedItems,
+	'{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}' : DataSet,
+	'{75482E9D-B225-419A-8187-EE9EB424138E}' : SwatchGroup,
+	'{196F9F57-2023-4C2F-8662-9C20F9D6DE7A}' : _RasterizeOptions,
+	'{96C13549-5237-4492-8345-2DB9FB6512BE}' : EmbedItem,
+	'{9157F2B0-D436-4AC6-9769-94DC89E6EC92}' : NonNativeItems,
+	'{4C78DFA8-7A09-11D4-81A0-00C04F60ECCC}' : Variables,
+	'{771DABCC-A731-4DC9-B795-41DE59C7F846}' : OpenOptions,
+	'{5FA89FBE-6A40-44D2-A25E-CB146FB03CDA}' : PrintColorManagementOptions,
+	'{2816A6BC-0DDE-4758-9EEA-9D56A080F102}' : SpotColor,
+	'{584DE2CF-5851-4706-AE18-BEC16020480E}' : Paper,
+	'{561231EA-87C6-4F37-B8A0-053CAE2AB706}' : _ExportForScreensOptionsPNG24,
+	'{4C78DFAB-7A09-11D4-81A0-00C04F60ECCC}' : DataSets,
+	'{C93373AB-D66E-47CD-81D1-CC324136B8B2}' : Ink,
+	'{65A81A10-85AE-46B1-B2F6-E475B852139D}' : DocumentPreset,
+	'{2A8F3C5F-B4E3-45BB-89CB-93F062B4F9F1}' : _ExportOptionsTIFF,
+	'{C7D18CB4-B414-48DC-A59A-CD89C4476007}' : ExportOptionsWebOptimizedSVG,
+	'{DB10BDB0-CC74-49DC-B9C6-8069AF4765BB}' : _ExportForScreensPDFOptions,
+	'{0A86B191-F1FE-48F5-8BED-E1121B2488F1}' : GradientColor,
+	'{38AE003B-0E4B-4EB8-8D21-DB5ECCBD5624}' : ExportForScreensItemToExport,
+	'{FEB59B75-1A61-4854-91B2-89EF24594CCB}' : PrintPostScriptOptions,
+	'{A14F6060-2F9B-464B-BFA6-2AC21E87DADE}' : PPDFileInfo,
+	'{C301D89D-C651-447D-94CB-6F605FB00358}' : PrintFontOptions,
+	'{713F68D4-459C-4229-AB12-526A71A19698}' : _ExportForScreensOptionsPNG8,
+	'{824DDFF0-9068-4173-B684-D4C33E22B8AF}' : ExportOptionsFlash,
+	'{E3A43D4E-69EB-4844-ACB1-35B8686CA0A8}' : Assets,
+	'{41004195-FCD1-43C7-B910-6D7B6F9DE763}' : FXGSaveOptions,
+	'{CD2F83CF-7078-42DE-AD8C-AF51EB242093}' : NoColor,
+	'{98C0ECCB-F1BC-4CEF-9A51-B9F06E40C52E}' : ExportForScreensOptionsPNG8,
+	'{53F599B3-4E43-445D-91C9-406AD78F4217}' : ExportOptionsGIF,
+	'{246086F4-6F43-4D2B-A0BA-3BFB0E484DDF}' : _RasterEffectOptions,
+	'{95CD20CA-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsJPEG,
+	'{57EDB0EB-8F86-4898-AA88-5D6F47DEE239}' : _LabColor,
+	'{3BB60A12-8FE2-44FD-A449-5366A3F9A792}' : PrintPageMarksOptions,
+	'{60E764BB-CBEE-421F-B706-D228072EBB89}' : _OpenOptions,
+	'{4BB0A74F-1AD4-420B-BC0C-CC798B127AA2}' : PrintCoordinateOptions,
+	'{558EF46F-A352-4A0D-9B1C-A2F6118FE611}' : SwatchGroups,
+	'{74356B35-AF38-4EA4-A0B8-36A163E4BEE6}' : Application,
+	'{95CD20CD-AD72-11D3-B086-0010A4F5C335}' : _ExportOptionsGIF,
+	'{4BA0BEFF-198A-464F-BACF-0BDF3EE23D81}' : ExportOptionsPNG24,
+	'{99D7941A-05F9-419A-BA50-4C6148B54187}' : EPSSaveOptions,
+	'{0E9E7B8C-BF29-4A10-9B1C-9F292FDAB07A}' : Stories,
+	'{4C78DFBD-7A09-11D4-81A0-00C04F60ECCC}' : PDFFileOptions,
+	'{93A24F08-D70A-42B1-8B1F-5A7FEC495C64}' : ExportOptionsTIFF,
+	'{72FA28E1-CDBE-4901-AE54-65ED3E5CABCF}' : ExportOptionsSVG,
+	'{F0692236-A49A-474D-9745-715426856760}' : TextFrame,
+	'{7C1FA60D-BF8F-4C43-B14C-77D842034966}' : CharacterStyle,
+	'{4C78DFC0-7A09-11D4-81A0-00C04F60ECCE}' : TracingObject,
 	'{E380AAF5-61BF-44C2-B3D2-00D631CE879D}' : _TabStopInfo,
-	'{95CD2C0B-AD72-11D3-B086-0010A4F5C335}' : _Printer,
-	'{95CD2C08-AD72-11D3-B086-0010A4F5C335}' : _PrinterInfo,
-	'{95CD2C0C-AD72-11D3-B086-0010A4F5C335}' : _PPDFile,
-	'{95CD2C0D-AD72-11D3-B086-0010A4F5C335}' : _Paper,
-	'{95CD2C0A-AD72-11D3-B086-0010A4F5C335}' : _PaperInfo,
-	'{95CD2C0E-AD72-11D3-B086-0010A4F5C335}' : _Screen,
-	'{95CD2C0F-AD72-11D3-B086-0010A4F5C335}' : _ScreenInfo,
-	'{95CD2C14-AD72-11D3-B086-0010A4F5C335}' : _ScreenSpotFunction,
-	'{95CD2C10-AD72-11D3-B086-0010A4F5C335}' : _Ink,
-	'{95CD2C11-AD72-11D3-B086-0010A4F5C335}' : _InkInfo,
+	'{1D188FA2-9537-42F3-8297-BD6294BA1686}' : PrintPaperOptions,
+	'{898129FA-400E-404F-A15C-7CC2F436C66F}' : IllustratorSaveOptions,
+	'{D56C5BBA-4228-4C1B-BCF8-641D01198CB3}' : TabStopInfo,
+	'{3A1386C2-0D30-4F08-922D-BB021D267140}' : PrintOptions,
+	'{6469F64B-E2C1-4B30-8FEB-72ED0B1A288A}' : ScreenInfo,
+	'{95CD20D6-AD72-11D3-B086-0010A4F5C335}' : Words,
+	'{2A144F2D-BD94-4175-B192-1F8143026200}' : Asset,
+	'{7BF03EDE-608F-4FD2-8516-CFE5C7FF7CE2}' : InkInfo,
+	'{95CD20D9-AD72-11D3-B086-0010A4F5C335}' : Spots,
+	'{091ADAF8-D422-11DB-8314-0800200C9A66}' : Artboards,
+	'{6BB14B4A-09A7-4C41-B2B6-CC2BFD483757}' : LabColor,
+	'{50639364-F8DF-4744-BBC9-C7B8C6751AA2}' : PrinterInfo,
 	'{95CD2C00-AD72-11D3-B086-0010A4F5C335}' : _PrintOptions,
-	'{95CD2C15-AD72-11D3-B086-0010A4F5C335}' : _PrintPaperOptions,
 	'{95CD2C01-AD72-11D3-B086-0010A4F5C335}' : _PrintJobOptions,
 	'{95CD2C02-AD72-11D3-B086-0010A4F5C335}' : _PrintColorSeparationOptions,
 	'{95CD2C03-AD72-11D3-B086-0010A4F5C335}' : _PrintCoordinateOptions,
 	'{95CD2C04-AD72-11D3-B086-0010A4F5C335}' : _PrintPageMarksOptions,
 	'{95CD2C05-AD72-11D3-B086-0010A4F5C335}' : _PrintFontOptions,
 	'{95CD2C06-AD72-11D3-B086-0010A4F5C335}' : _PrintPostScriptOptions,
-	'{95CD2C07-AD72-11D3-B086-0010A4F5C335}' : _PrintColorManagementOptions,
-	'{4C78DFEB-7A09-11D4-81A0-00C04F60ECCC}' : _ImageCaptureOptions,
-	'{196F9F57-2023-4C2F-8662-9C20F9D6DE7A}' : _RasterizeOptions,
-	'{0FA36670-F0BC-48C0-AD25-6CF62CAD3A31}' : Application,
-	'{F95B83D1-94FC-4AF6-99B0-9094BE3AB899}' : OpenOptions,
-	'{8DA7F9C4-7E22-46BD-BA1D-5517A9F0CD18}' : FXGSaveOptions,
-	'{F07FD4A3-5651-47DA-AC33-91BC06403816}' : EPSSaveOptions,
-	'{695B5492-AC6A-479A-A2B1-E8AE9DDE5B40}' : PDFSaveOptions,
-	'{5C9DB812-A552-4513-8C6B-3D21EFC42605}' : IllustratorSaveOptions,
-	'{E580BAB8-2188-4312-A007-7449839ACF29}' : Matrix,
-	'{4C1581E0-3BA8-4CE6-83FC-34EF5F2A9F40}' : ExportOptionsJPEG,
-	'{ECF0C759-F01B-4B3B-8922-541C1C163DF3}' : ExportOptionsPNG8,
-	'{668E6292-D51A-4628-9800-4817A6762DF3}' : ExportOptionsPNG24,
-	'{46E4F107-315D-4BDF-BE66-4E33D9596A9A}' : ExportOptionsGIF,
-	'{1CC2A29F-5B2C-4359-9728-0D1771BDE2B1}' : ExportOptionsPhotoshop,
-	'{8930E841-DD0D-47EB-ACB1-8A37AFDD5A2A}' : ExportOptionsSVG,
-	'{FCB10B56-8002-46AE-A70D-D02783FFA353}' : ExportOptionsWebOptimizedSVG,
-	'{09534ADA-D2A2-45EB-BD90-8E4D391D306B}' : ExportOptionsFlash,
-	'{D678C828-971A-4759-8A5D-3FF12C221A22}' : ExportOptionsAutoCAD,
-	'{A07D1206-AB5A-4BB1-9207-AEBA31A2D652}' : ExportOptionsTIFF,
-	'{EF57A9D6-A4A8-4136-94C8-8C707F392A92}' : LabColor,
-	'{40A7C4A8-EFD2-43A8-806F-5B0CCE61DCE6}' : Dimensions,
-	'{6707D262-70F2-423D-88E1-ADCE85B359CE}' : RGBColor,
-	'{9AFB43D8-2ABA-4DE9-A3E1-617AAA863C22}' : CMYKColor,
-	'{2FEEBDFA-68E5-49AE-BE7B-1A97F09DF8F9}' : GrayColor,
-	'{013C465C-6000-40C3-B7A6-B236B53A672D}' : NoColor,
-	'{00BAC15D-DEEB-47CE-B207-C0C72BC7718C}' : SpotColor,
-	'{F493FD6F-9E65-4AE4-AED9-AFDA9CF7F3ED}' : PatternColor,
-	'{B2FE80F4-9612-48F9-87AD-B79A905BCBFC}' : GradientColor,
-	'{F26D5AB0-8B1D-4BF2-87A7-4EC6B74B03EF}' : TabStopInfo,
-	'{081252CB-D855-48B9-9D85-FA9A9981DF81}' : Printer,
-	'{29FEE1EA-CD21-41A6-9340-6219E3E57BB7}' : PrinterInfo,
-	'{D2DBC561-0DCE-4141-8FE8-2ECA346CED3E}' : PPDFile,
-	'{EBE15492-1925-4BA2-A987-8F77CB15FCF0}' : PPDFileInfo,
-	'{99044697-4AD8-4B63-A3D8-BBFE4610C844}' : Paper,
-	'{2D6EDDEF-62F9-4D38-A0B5-68B576721018}' : PaperInfo,
-	'{162B9894-C6F9-4E55-A6D9-BFD86B8BF4F5}' : Screen,
-	'{FB23AEC3-074E-4CE4-8FC7-2391BBF14140}' : ScreenInfo,
-	'{0D7F382B-98D9-4834-AE8D-6A03017CB774}' : ScreenSpotFunction,
-	'{E417157D-29E4-408A-B742-0F908DF8C745}' : Ink,
-	'{F4A69A15-7701-4DF4-948D-9E7FBACC0787}' : InkInfo,
-	'{E2D4A432-9E16-41E6-BCA5-062890269CD1}' : DocumentPreset,
-	'{76543789-87FE-43E4-B70C-17089F44F447}' : PrintOptions,
-	'{297CFCE2-7884-400D-AEB1-BAB1BB3CC897}' : PrintPaperOptions,
-	'{A816141F-0C6E-4F89-846A-0F596AEDAF9F}' : PrintJobOptions,
-	'{C43D57E6-B94A-4DAD-BEA4-153159D34529}' : PrintColorSeparationOptions,
-	'{42A65455-5260-4F3D-A4FE-33B2C5BF839C}' : PrintCoordinateOptions,
-	'{D41CD84C-C090-4B8F-A7CD-44CCF26C254E}' : PrintPageMarksOptions,
-	'{FDB1EDFA-8339-4630-A515-6ACFD4102EDD}' : PrintFontOptions,
-	'{F58B5314-DC1D-4283-90C4-2248F6E60C6C}' : PrintPostScriptOptions,
-	'{EBAD60C2-68F6-4D26-A3A2-0AFD276418AC}' : PrintColorManagementOptions,
-	'{C3BF40DE-EDA0-493B-924A-42FD00D36CEB}' : PrintFlattenerOptions,
-	'{BD1B34AB-D76C-4DA1-A134-086969C4EDEF}' : ImageCaptureOptions,
-	'{F4FCC1A9-2D0B-4555-B48D-ADE421F10F54}' : RasterEffectOptions,
-	'{FA4BF28E-9A94-4EE8-A050-74C8A54B107F}' : RasterizeOptions,
+	'{4C78DFC9-7A09-11D4-81A0-00C04F60ECCC}' : Symbols,
+	'{95CD2C08-AD72-11D3-B086-0010A4F5C335}' : _PrinterInfo,
+	'{95CD2C09-AD72-11D3-B086-0010A4F5C335}' : _PPDFileInfo,
+	'{95CD2C0A-AD72-11D3-B086-0010A4F5C335}' : _PaperInfo,
+	'{95CD2C0B-AD72-11D3-B086-0010A4F5C335}' : _Printer,
+	'{95CD2C0C-AD72-11D3-B086-0010A4F5C335}' : _PPDFile,
+	'{95CD2C0D-AD72-11D3-B086-0010A4F5C335}' : _Paper,
+	'{95CD2C0E-AD72-11D3-B086-0010A4F5C335}' : _Screen,
+	'{95CD2C0F-AD72-11D3-B086-0010A4F5C335}' : _ScreenInfo,
+	'{95CD2C10-AD72-11D3-B086-0010A4F5C335}' : _Ink,
+	'{95CD2C11-AD72-11D3-B086-0010A4F5C335}' : _InkInfo,
+	'{95CD2C12-AD72-11D3-B086-0010A4F5C335}' : _PrintFlattenerOptions,
+	'{95CD2C14-AD72-11D3-B086-0010A4F5C335}' : _ScreenSpotFunction,
+	'{95CD2C15-AD72-11D3-B086-0010A4F5C335}' : _PrintPaperOptions,
+	'{11BD3EFB-312F-435E-8297-525E317612BC}' : Printer,
+	'{4C78DFCC-7A09-11D4-81A0-00C04F60ECCC}' : Preferences,
+	'{0E3BF58B-A0F2-4776-9CD0-279FCB26009E}' : ParagraphStyles,
+	'{95CD20E0-AD72-11D3-B086-0010A4F5C335}' : PageItems,
+	'{4C78DFCE-7A09-11D4-81A0-00C04F60ECCC}' : ParagraphAttributes,
+	'{FDFC31E3-E09F-4311-B021-297CBD9BD5E8}' : CMYKColor,
 }
 CLSIDToPackageMap = {}
 win32com.client.CLSIDToClass.RegisterCLSIDsFromDict( CLSIDToClassMap )
@@ -11851,144 +12951,152 @@ VTablesToClassMap = {
 
 
 NamesToIIDMap = {
-	'_Application' : '{95CD20AA-AD72-11D3-B086-0010A4F5C335}',
-	'Document' : '{95CD20AB-AD72-11D3-B086-0010A4F5C335}',
-	'Layer' : '{95CD20AC-AD72-11D3-B086-0010A4F5C335}',
-	'_RGBColor' : '{95CD20B1-AD72-11D3-B086-0010A4F5C335}',
-	'CompoundPathItems' : '{95CD20E3-AD72-11D3-B086-0010A4F5C335}',
-	'CompoundPathItem' : '{95CD20BE-AD72-11D3-B086-0010A4F5C335}',
-	'PathItems' : '{95CD20E1-AD72-11D3-B086-0010A4F5C335}',
-	'PathItem' : '{95CD20C0-AD72-11D3-B086-0010A4F5C335}',
-	'PathPoints' : '{95CD20E2-AD72-11D3-B086-0010A4F5C335}',
-	'PathPoint' : '{95CD20C1-AD72-11D3-B086-0010A4F5C335}',
-	'Tags' : '{95CD20EB-AD72-11D3-B086-0010A4F5C335}',
-	'Tag' : '{95CD20BF-AD72-11D3-B086-0010A4F5C335}',
-	'GraphItem' : '{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}',
-	'GroupItem' : '{95CD20C6-AD72-11D3-B086-0010A4F5C335}',
-	'GroupItems' : '{95CD20DF-AD72-11D3-B086-0010A4F5C335}',
-	'PageItems' : '{95CD20E0-AD72-11D3-B086-0010A4F5C335}',
-	'RasterItems' : '{95CD20EC-AD72-11D3-B086-0010A4F5C335}',
-	'RasterItem' : '{95CD20C2-AD72-11D3-B086-0010A4F5C335}',
-	'_Matrix' : '{95CD20C9-AD72-11D3-B086-0010A4F5C335}',
-	'MeshItem' : '{95CD20C4-AD72-11D3-B086-0010A4F5C335}',
-	'PlacedItem' : '{95CD20C3-AD72-11D3-B086-0010A4F5C335}',
-	'PluginItem' : '{95CD20C5-AD72-11D3-B086-0010A4F5C335}',
-	'TracingObject' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCE}',
-	'TracingOptions' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCD}',
-	'SymbolItem' : '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}',
-	'Symbol' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}',
-	'PlacedItems' : '{95CD20ED-AD72-11D3-B086-0010A4F5C335}',
-	'MeshItems' : '{95CD20EE-AD72-11D3-B086-0010A4F5C335}',
-	'PluginItems' : '{95CD20EF-AD72-11D3-B086-0010A4F5C335}',
-	'GraphItems' : '{4C78DFB4-7A09-11D4-81A0-00C04F60ECCC}',
-	'NonNativeItems' : '{9157F2B0-D436-4AC6-9769-94DC89E6EC92}',
-	'NonNativeItem' : '{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}',
-	'TextFrames' : '{3CC63F1C-EA9C-4636-A16C-63808C42691E}',
-	'TextFrame' : '{F0692236-A49A-474D-9745-715426856760}',
-	'Story' : '{8507C961-DE07-440E-A2D8-6D48247ABF79}',
-	'TextRange' : '{95CD20D0-AD72-11D3-B086-0010A4F5C335}',
-	'Characters' : '{95CD20D5-AD72-11D3-B086-0010A4F5C335}',
-	'Words' : '{95CD20D6-AD72-11D3-B086-0010A4F5C335}',
-	'Lines' : '{95CD20D7-AD72-11D3-B086-0010A4F5C335}',
-	'Paragraphs' : '{95CD20D8-AD72-11D3-B086-0010A4F5C335}',
-	'TextRanges' : '{20899C07-06F0-4803-BD2A-4059F9764852}',
-	'InsertionPoints' : '{20899C08-06F0-4803-BD2A-4059F9764852}',
-	'InsertionPoint' : '{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}',
-	'CharacterStyles' : '{255CD590-0FBF-4345-94F5-871C4021D6BF}',
-	'CharacterStyle' : '{7C1FA60D-BF8F-4C43-B14C-77D842034966}',
-	'CharacterAttributes' : '{4C78DFCD-7A09-11D4-81A0-00C04F60ECCC}',
 	'TextFont' : '{95CD20BC-AD72-11D3-B086-0010A4F5C335}',
-	'ParagraphStyles' : '{0E3BF58B-A0F2-4776-9CD0-279FCB26009E}',
-	'ParagraphStyle' : '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}',
-	'ParagraphAttributes' : '{4C78DFCE-7A09-11D4-81A0-00C04F60ECCC}',
-	'TextPath' : '{95CD20C8-AD72-11D3-B086-0010A4F5C335}',
-	'SymbolItems' : '{4C78DFC6-7A09-11D4-81A0-00C04F60ECCC}',
-	'LegacyTextItems' : '{4C78DFE9-7A09-11D4-81A0-00C04F60ECCC}',
-	'LegacyTextItem' : '{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}',
-	'Layers' : '{95CD20DC-AD72-11D3-B086-0010A4F5C335}',
-	'View' : '{95CD20AD-AD72-11D3-B086-0010A4F5C335}',
-	'DataSet' : '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}',
-	'_RasterEffectOptions' : '{246086F4-6F43-4D2B-A0BA-3BFB0E484DDF}',
-	'Artboards' : '{091ADAF8-D422-11DB-8314-0800200C9A66}',
-	'Artboard' : '{30557E1D-A243-499D-84B8-6E170B36A1BD}',
-	'Views' : '{95CD20F0-AD72-11D3-B086-0010A4F5C335}',
-	'EmbeddedItems' : '{FF327E57-2EDA-4934-B3FD-CF470C62989D}',
-	'EmbedItem' : '{96C13549-5237-4492-8345-2DB9FB6512BE}',
-	'Stories' : '{0E9E7B8C-BF29-4A10-9B1C-9F292FDAB07A}',
-	'Swatches' : '{95CD20DA-AD72-11D3-B086-0010A4F5C335}',
-	'Swatch' : '{95CD20B8-AD72-11D3-B086-0010A4F5C335}',
-	'SwatchGroups' : '{558EF46F-A352-4A0D-9B1C-A2F6118FE611}',
-	'SwatchGroup' : '{75482E9D-B225-419A-8187-EE9EB424138E}',
-	'Spot' : '{95CD20B5-AD72-11D3-B086-0010A4F5C335}',
-	'Gradients' : '{95CD20DD-AD72-11D3-B086-0010A4F5C335}',
-	'Gradient' : '{95CD20AE-AD72-11D3-B086-0010A4F5C335}',
-	'GradientStops' : '{95CD20DE-AD72-11D3-B086-0010A4F5C335}',
-	'GradientStop' : '{95CD20AF-AD72-11D3-B086-0010A4F5C335}',
-	'Patterns' : '{95CD20E7-AD72-11D3-B086-0010A4F5C335}',
-	'Pattern' : '{95CD20B9-AD72-11D3-B086-0010A4F5C335}',
-	'Spots' : '{95CD20D9-AD72-11D3-B086-0010A4F5C335}',
-	'Symbols' : '{4C78DFC9-7A09-11D4-81A0-00C04F60ECCC}',
-	'Brushes' : '{95CD20E8-AD72-11D3-B086-0010A4F5C335}',
-	'Brush' : '{95CD20BA-AD72-11D3-B086-0010A4F5C335}',
-	'GraphicStyles' : '{95CD20E9-AD72-11D3-B086-0010A4F5C335}',
-	'GraphicStyle' : '{95CD20BB-AD72-11D3-B086-0010A4F5C335}',
-	'Variables' : '{4C78DFA8-7A09-11D4-81A0-00C04F60ECCC}',
-	'Variable' : '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}',
-	'DataSets' : '{4C78DFAB-7A09-11D4-81A0-00C04F60ECCC}',
-	'Preferences' : '{4C78DFCC-7A09-11D4-81A0-00C04F60ECCC}',
-	'PhotoshopFileOptions' : '{4C78DFBA-7A09-11D4-81A0-00C04F60ECCC}',
-	'PDFFileOptions' : '{4C78DFBD-7A09-11D4-81A0-00C04F60ECCC}',
-	'AutoCADFileOptions' : '{AD865867-DED8-42D6-9BD8-D77533905975}',
-	'Documents' : '{95CD20DB-AD72-11D3-B086-0010A4F5C335}',
-	'TextFonts' : '{95CD20EA-AD72-11D3-B086-0010A4F5C335}',
-	'_DocumentPreset' : '{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}',
-	'_PPDFileInfo' : '{95CD2C09-AD72-11D3-B086-0010A4F5C335}',
-	'_OpenOptions' : '{60E764BB-CBEE-421F-B706-D228072EBB89}',
-	'_FXGSaveOptions' : '{500C9AF9-AA54-4941-B544-132E4D285938}',
-	'_EPSSaveOptions' : '{95CD20A7-AD72-11D3-B086-0010A4F5C335}',
-	'_PDFSaveOptions' : '{95CD20A8-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintFlattenerOptions' : '{95CD2C12-AD72-11D3-B086-0010A4F5C335}',
-	'_IllustratorSaveOptions' : '{95CD20A9-AD72-11D3-B086-0010A4F5C335}',
-	'_ExportOptionsJPEG' : '{95CD20CA-AD72-11D3-B086-0010A4F5C335}',
-	'_ExportOptionsPNG8' : '{95CD20CB-AD72-11D3-B086-0010A4F5C335}',
-	'_ExportOptionsPNG24' : '{95CD20CC-AD72-11D3-B086-0010A4F5C335}',
-	'_Dimensions' : '{95CD20B1-AD72-11D3-B086-0010A7F5C335}',
-	'_ExportOptionsGIF' : '{95CD20CD-AD72-11D3-B086-0010A4F5C335}',
-	'_ExportOptionsPhotoshop' : '{A07B43A9-0201-4369-A1B5-8A33C8A0BB23}',
-	'_ExportOptionsSVG' : '{95CD20CF-AD72-11D3-B086-0010A4F5C335}',
 	'_ExportOptionsWebOptimizedSVG' : '{4C78DF9F-7A09-11D4-81A0-00C04F60ECCE}',
-	'_ExportOptionsFlash' : '{4C78DF9F-7A09-11D4-81A0-00C04F60ECCC}',
-	'_ExportOptionsAutoCAD' : '{AD25A97A-80BC-4D6A-9E61-7E288DE977CA}',
-	'_ExportOptionsTIFF' : '{2A8F3C5F-B4E3-45BB-89CB-93F062B4F9F1}',
-	'_LabColor' : '{57EDB0EB-8F86-4898-AA88-5D6F47DEE239}',
-	'_CMYKColor' : '{95CD20B2-AD72-11D3-B086-0010A4F5C335}',
-	'_GrayColor' : '{95CD20B3-AD72-11D3-B086-0010A4F5C335}',
-	'_NoColor' : '{4C78DFE6-7A09-11D4-81A0-00C04F60ECCC}',
-	'_SpotColor' : '{95CD20B4-AD72-11D3-B086-0010A4F5C335}',
-	'_PatternColor' : '{95CD20B6-AD72-11D3-B086-0010A4F5C335}',
-	'_GradientColor' : '{95CD20B7-AD72-11D3-B086-0010A4F5C335}',
+	'PathItem' : '{95CD20C0-AD72-11D3-B086-0010A4F5C335}',
 	'_TabStopInfo' : '{E380AAF5-61BF-44C2-B3D2-00D631CE879D}',
-	'_Printer' : '{95CD2C0B-AD72-11D3-B086-0010A4F5C335}',
-	'_PrinterInfo' : '{95CD2C08-AD72-11D3-B086-0010A4F5C335}',
-	'_PPDFile' : '{95CD2C0C-AD72-11D3-B086-0010A4F5C335}',
-	'_Paper' : '{95CD2C0D-AD72-11D3-B086-0010A4F5C335}',
-	'_PaperInfo' : '{95CD2C0A-AD72-11D3-B086-0010A4F5C335}',
+	'_SpotColor' : '{95CD20B4-AD72-11D3-B086-0010A4F5C335}',
+	'Spots' : '{95CD20D9-AD72-11D3-B086-0010A4F5C335}',
 	'_Screen' : '{95CD2C0E-AD72-11D3-B086-0010A4F5C335}',
-	'_ScreenInfo' : '{95CD2C0F-AD72-11D3-B086-0010A4F5C335}',
-	'_ScreenSpotFunction' : '{95CD2C14-AD72-11D3-B086-0010A4F5C335}',
+	'Asset' : '{2A144F2D-BD94-4175-B192-1F8143026200}',
 	'_Ink' : '{95CD2C10-AD72-11D3-B086-0010A4F5C335}',
-	'_InkInfo' : '{95CD2C11-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintOptions' : '{95CD2C00-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintPaperOptions' : '{95CD2C15-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintJobOptions' : '{95CD2C01-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintColorSeparationOptions' : '{95CD2C02-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintCoordinateOptions' : '{95CD2C03-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintPageMarksOptions' : '{95CD2C04-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintFontOptions' : '{95CD2C05-AD72-11D3-B086-0010A4F5C335}',
-	'_PrintPostScriptOptions' : '{95CD2C06-AD72-11D3-B086-0010A4F5C335}',
+	'Document' : '{95CD20AB-AD72-11D3-B086-0010A4F5C335}',
+	'CharacterStyle' : '{7C1FA60D-BF8F-4C43-B14C-77D842034966}',
+	'Views' : '{95CD20F0-AD72-11D3-B086-0010A4F5C335}',
+	'TextPath' : '{95CD20C8-AD72-11D3-B086-0010A4F5C335}',
 	'_PrintColorManagementOptions' : '{95CD2C07-AD72-11D3-B086-0010A4F5C335}',
-	'_ImageCaptureOptions' : '{4C78DFEB-7A09-11D4-81A0-00C04F60ECCC}',
+	'_Matrix' : '{95CD20C9-AD72-11D3-B086-0010A4F5C335}',
+	'Spot' : '{95CD20B5-AD72-11D3-B086-0010A4F5C335}',
+	'_GradientColor' : '{95CD20B7-AD72-11D3-B086-0010A4F5C335}',
+	'GraphicStyles' : '{95CD20E9-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportForScreensItemToExport' : '{4028B58C-1543-4B0B-A73B-4783B12BD760}',
+	'_ExportForScreensOptionsPNG8' : '{713F68D4-459C-4229-AB12-526A71A19698}',
+	'_RasterEffectOptions' : '{246086F4-6F43-4D2B-A0BA-3BFB0E484DDF}',
+	'_PaperInfo' : '{95CD2C0A-AD72-11D3-B086-0010A4F5C335}',
+	'_NoColor' : '{4C78DFE6-7A09-11D4-81A0-00C04F60ECCC}',
+	'TextRanges' : '{20899C07-06F0-4803-BD2A-4059F9764852}',
+	'_ExportForScreensOptionsPNG24' : '{561231EA-87C6-4F37-B8A0-053CAE2AB706}',
+	'CharacterStyles' : '{255CD590-0FBF-4345-94F5-871C4021D6BF}',
+	'GroupItems' : '{95CD20DF-AD72-11D3-B086-0010A4F5C335}',
+	'CompoundPathItem' : '{95CD20BE-AD72-11D3-B086-0010A4F5C335}',
+	'Stories' : '{0E9E7B8C-BF29-4A10-9B1C-9F292FDAB07A}',
+	'_CMYKColor' : '{95CD20B2-AD72-11D3-B086-0010A4F5C335}',
+	'RasterItems' : '{95CD20EC-AD72-11D3-B086-0010A4F5C335}',
+	'Layer' : '{95CD20AC-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportForScreensOptionsWebOptimizedSVG' : '{1BD449AE-95C1-496B-9BDD-32AEB30CA819}',
+	'AutoCADFileOptions' : '{AD865867-DED8-42D6-9BD8-D77533905975}',
+	'MeshItems' : '{95CD20EE-AD72-11D3-B086-0010A4F5C335}',
+	'_GrayColor' : '{95CD20B3-AD72-11D3-B086-0010A4F5C335}',
+	'GraphItems' : '{4C78DFB4-7A09-11D4-81A0-00C04F60ECCC}',
+	'SymbolItem' : '{4C78DFC3-7A09-11D4-81A0-00C04F60ECCC}',
+	'_ExportOptionsGIF' : '{95CD20CD-AD72-11D3-B086-0010A4F5C335}',
+	'CharacterAttributes' : '{4C78DFCD-7A09-11D4-81A0-00C04F60ECCC}',
+	'PathItems' : '{95CD20E1-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintFlattenerOptions' : '{95CD2C12-AD72-11D3-B086-0010A4F5C335}',
+	'Assets' : '{E3A43D4E-69EB-4844-ACB1-35B8686CA0A8}',
+	'Layers' : '{95CD20DC-AD72-11D3-B086-0010A4F5C335}',
+	'_EPSSaveOptions' : '{95CD20A7-AD72-11D3-B086-0010A4F5C335}',
+	'_Application' : '{95CD20AA-AD72-11D3-B086-0010A4F5C335}',
+	'Preferences' : '{4C78DFCC-7A09-11D4-81A0-00C04F60ECCC}',
+	'ParagraphStyles' : '{0E3BF58B-A0F2-4776-9CD0-279FCB26009E}',
+	'Pattern' : '{95CD20B9-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportOptionsTIFF' : '{2A8F3C5F-B4E3-45BB-89CB-93F062B4F9F1}',
+	'GraphItem' : '{4C78DFB7-7A09-11D4-81A0-00C04F60ECCC}',
+	'TracingOptions' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCD}',
+	'PathPoints' : '{95CD20E2-AD72-11D3-B086-0010A4F5C335}',
+	'PhotoshopFileOptions' : '{4C78DFBA-7A09-11D4-81A0-00C04F60ECCC}',
+	'_Printer' : '{95CD2C0B-AD72-11D3-B086-0010A4F5C335}',
+	'NonNativeItem' : '{FC0A0BD3-5FFB-4301-A44F-F5B3ED181224}',
+	'GroupItem' : '{95CD20C6-AD72-11D3-B086-0010A4F5C335}',
+	'LegacyTextItems' : '{4C78DFE9-7A09-11D4-81A0-00C04F60ECCC}',
+	'_FXGSaveOptions' : '{500C9AF9-AA54-4941-B544-132E4D285938}',
+	'InsertionPoint' : '{4C78DFE7-7A09-11D4-81A0-00C04F60ECCC}',
+	'_ScreenInfo' : '{95CD2C0F-AD72-11D3-B086-0010A4F5C335}',
+	'Tag' : '{95CD20BF-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintPageMarksOptions' : '{95CD2C04-AD72-11D3-B086-0010A4F5C335}',
+	'CompoundPathItems' : '{95CD20E3-AD72-11D3-B086-0010A4F5C335}',
+	'EmbeddedItems' : '{FF327E57-2EDA-4934-B3FD-CF470C62989D}',
+	'InsertionPoints' : '{20899C08-06F0-4803-BD2A-4059F9764852}',
+	'TracingObject' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCE}',
+	'_ScreenSpotFunction' : '{95CD2C14-AD72-11D3-B086-0010A4F5C335}',
+	'_OpenOptions' : '{60E764BB-CBEE-421F-B706-D228072EBB89}',
+	'TextFonts' : '{95CD20EA-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportOptionsJPEG' : '{95CD20CA-AD72-11D3-B086-0010A4F5C335}',
+	'Symbols' : '{4C78DFC9-7A09-11D4-81A0-00C04F60ECCC}',
+	'LegacyTextItem' : '{4C78DFE8-7A09-11D4-81A0-00C04F60ECCC}',
+	'Brush' : '{95CD20BA-AD72-11D3-B086-0010A4F5C335}',
+	'PluginItem' : '{95CD20C5-AD72-11D3-B086-0010A4F5C335}',
+	'_Paper' : '{95CD2C0D-AD72-11D3-B086-0010A4F5C335}',
+	'Story' : '{8507C961-DE07-440E-A2D8-6D48247ABF79}',
+	'_PDFSaveOptions' : '{95CD20A8-AD72-11D3-B086-0010A4F5C335}',
+	'GradientStops' : '{95CD20DE-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintOptions' : '{95CD2C00-AD72-11D3-B086-0010A4F5C335}',
+	'Gradient' : '{95CD20AE-AD72-11D3-B086-0010A4F5C335}',
+	'DataSet' : '{4C78DFA5-7A09-11D4-81A0-00C04F60ECCC}',
+	'Documents' : '{95CD20DB-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintFontOptions' : '{95CD2C05-AD72-11D3-B086-0010A4F5C335}',
+	'_LabColor' : '{57EDB0EB-8F86-4898-AA88-5D6F47DEE239}',
+	'_ExportOptionsPNG24' : '{95CD20CC-AD72-11D3-B086-0010A4F5C335}',
+	'TextRange' : '{95CD20D0-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportOptionsPhotoshop' : '{A07B43A9-0201-4369-A1B5-8A33C8A0BB23}',
+	'GradientStop' : '{95CD20AF-AD72-11D3-B086-0010A4F5C335}',
+	'Tags' : '{95CD20EB-AD72-11D3-B086-0010A4F5C335}',
+	'Symbol' : '{4C78DFC0-7A09-11D4-81A0-00C04F60ECCC}',
+	'Brushes' : '{95CD20E8-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintColorSeparationOptions' : '{95CD2C02-AD72-11D3-B086-0010A4F5C335}',
+	'Characters' : '{95CD20D5-AD72-11D3-B086-0010A4F5C335}',
+	'Variable' : '{4C78DFA2-7A09-11D4-81A0-00C04F60ECCC}',
+	'MeshItem' : '{95CD20C4-AD72-11D3-B086-0010A4F5C335}',
+	'ParagraphStyle' : '{2D2A6B70-EA28-49AA-B7C0-3EEC671CBACC}',
+	'_ExportOptionsPNG8' : '{95CD20CB-AD72-11D3-B086-0010A4F5C335}',
+	'Artboards' : '{091ADAF8-D422-11DB-8314-0800200C9A66}',
+	'_Dimensions' : '{95CD20B1-AD72-11D3-B086-0010A7F5C335}',
+	'Words' : '{95CD20D6-AD72-11D3-B086-0010A4F5C335}',
+	'Swatches' : '{95CD20DA-AD72-11D3-B086-0010A4F5C335}',
+	'PDFFileOptions' : '{4C78DFBD-7A09-11D4-81A0-00C04F60ECCC}',
+	'PlacedItems' : '{95CD20ED-AD72-11D3-B086-0010A4F5C335}',
+	'_RGBColor' : '{95CD20B1-AD72-11D3-B086-0010A4F5C335}',
+	'Patterns' : '{95CD20E7-AD72-11D3-B086-0010A4F5C335}',
+	'NonNativeItems' : '{9157F2B0-D436-4AC6-9769-94DC89E6EC92}',
+	'_PPDFileInfo' : '{95CD2C09-AD72-11D3-B086-0010A4F5C335}',
+	'ParagraphAttributes' : '{4C78DFCE-7A09-11D4-81A0-00C04F60ECCC}',
+	'_ExportOptionsSVG' : '{95CD20CF-AD72-11D3-B086-0010A4F5C335}',
+	'DataSets' : '{4C78DFAB-7A09-11D4-81A0-00C04F60ECCC}',
+	'PageItems' : '{95CD20E0-AD72-11D3-B086-0010A4F5C335}',
+	'Gradients' : '{95CD20DD-AD72-11D3-B086-0010A4F5C335}',
+	'_PatternColor' : '{95CD20B6-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintPaperOptions' : '{95CD2C15-AD72-11D3-B086-0010A4F5C335}',
+	'SwatchGroup' : '{75482E9D-B225-419A-8187-EE9EB424138E}',
+	'PluginItems' : '{95CD20EF-AD72-11D3-B086-0010A4F5C335}',
+	'SwatchGroups' : '{558EF46F-A352-4A0D-9B1C-A2F6118FE611}',
+	'EmbedItem' : '{96C13549-5237-4492-8345-2DB9FB6512BE}',
+	'_PPDFile' : '{95CD2C0C-AD72-11D3-B086-0010A4F5C335}',
+	'PlacedItem' : '{95CD20C3-AD72-11D3-B086-0010A4F5C335}',
+	'_IllustratorSaveOptions' : '{95CD20A9-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportForScreensOptionsJPEG' : '{97DDAA0B-4235-4E6F-B13C-FE850F759964}',
+	'TextFrame' : '{F0692236-A49A-474D-9745-715426856760}',
 	'_RasterizeOptions' : '{196F9F57-2023-4C2F-8662-9C20F9D6DE7A}',
+	'Artboard' : '{30557E1D-A243-499D-84B8-6E170B36A1BD}',
+	'_PrinterInfo' : '{95CD2C08-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportOptionsAutoCAD' : '{AD25A97A-80BC-4D6A-9E61-7E288DE977CA}',
+	'_ExportOptionsFlash' : '{4C78DF9F-7A09-11D4-81A0-00C04F60ECCC}',
+	'_InkInfo' : '{95CD2C11-AD72-11D3-B086-0010A4F5C335}',
+	'Swatch' : '{95CD20B8-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintCoordinateOptions' : '{95CD2C03-AD72-11D3-B086-0010A4F5C335}',
+	'TextFrames' : '{3CC63F1C-EA9C-4636-A16C-63808C42691E}',
+	'Lines' : '{95CD20D7-AD72-11D3-B086-0010A4F5C335}',
+	'_DocumentPreset' : '{B1607D7C-2EA8-41B0-977A-F5B0A36DF932}',
+	'SymbolItems' : '{4C78DFC6-7A09-11D4-81A0-00C04F60ECCC}',
+	'_ImageCaptureOptions' : '{4C78DFEB-7A09-11D4-81A0-00C04F60ECCC}',
+	'GraphicStyle' : '{95CD20BB-AD72-11D3-B086-0010A4F5C335}',
+	'View' : '{95CD20AD-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintPostScriptOptions' : '{95CD2C06-AD72-11D3-B086-0010A4F5C335}',
+	'_ExportForScreensPDFOptions' : '{DB10BDB0-CC74-49DC-B9C6-8069AF4765BB}',
+	'RasterItem' : '{95CD20C2-AD72-11D3-B086-0010A4F5C335}',
+	'Variables' : '{4C78DFA8-7A09-11D4-81A0-00C04F60ECCC}',
+	'PathPoint' : '{95CD20C1-AD72-11D3-B086-0010A4F5C335}',
+	'_PrintJobOptions' : '{95CD2C01-AD72-11D3-B086-0010A4F5C335}',
+	'Paragraphs' : '{95CD20D8-AD72-11D3-B086-0010A4F5C335}',
 }
 
 win32com.client.constants.__dicts__.append(constants.__dict__)
